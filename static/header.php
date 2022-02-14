@@ -1,6 +1,7 @@
 
 
 <!-- ======= Header ======= -->
+
   <!-- <header id="header" class="fixed-top d-flex align-items-center header-transparent"> -->
   <div class="container-fluid">
       <div class="row justify-content-center align-items-center">
@@ -30,6 +31,55 @@
         </div>
       </div>
     </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('a').click(function() {
+          // var activeAs = $(".nav-link");
+          
+          if (this.toString().indexOf("servicios") > -1){
+            
+          }else if(this.toString().indexOf("servicios") > -1){
+            
+          }else if(this.toString().indexOf("nosotros") > -1){
+            
+          }else if(this.toString().indexOf("contacto") > -1){
+            
+          }else{
+            
+          }
+          
+          
+          // alert(JSON.stringify(activeAs[0]));
+          // alert(this);
+          // $(this).removeClass('active');
+          // alert(this);
+          // alert(this);
+          
+          // for (let index = 0; index < activeAs.length; index++) {
+            // const element = array[index];
+            // alert(activeAs[3]);
+            
+          // }
+          
+          // alert(activeAs);
+          // $('ul').find('li.active').removeClass('active');
+        // alert(this);
+        //  $(this).parents("a").addClass('active');
+          
+        });
+    });
+    
+    
+    
+</script>
+
+
+
+    
+    
   <!-- </header>  -->
   <!-- </header>  -->
 <!-- End Header -->
