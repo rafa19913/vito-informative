@@ -28,37 +28,14 @@
   <link href="assets/css/style.css" rel="stylesheet">
   
 </head>
+
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
-  <!-- <header id="header" class="fixed-top d-flex align-items-center header-transparent"> -->
-  <div class="container-fluid">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-xl-11 d-flex align-items-center justify-content-between">
-          <!-- <h1 class="logo"><a href="index.html">BizPage</a></h1> -->
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="index.html" class="logo"><img src="assets/img/logo-vito.png" alt="" class="img-fluid"></a>
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a class="nav-link" href="index.php">Home</a></li>
-              <li><a class="nav-link active" href="servicios.php">Servicios</a></li>
-              <li><a class="nav-link" href="nosotros.php">Nosotros</a></li>
-              <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                <li><a href="impresoras.php">Impresoras</a></li>
-                  <li><a href="escaneres.php">Escáneres</a></li>
-                  <li><a href="terminales.php">Terminales</a></li>
-                  <li><a href="consumibles.php">Consumibles</a></li>
-                  <li><a href="cctv.php">CCTV</a></li>
-                  <li><a href="computacion.php">Computación</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link" href="contacto.php">Contacto</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-        </div>
-      </div>
-    </div>
-  <!-- </header>  -->
+  
+  <?php
+    include("static/header.php");
+  
+  ?>
+
 </header> 
 
 

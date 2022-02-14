@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+header("Content-Type: text/html;charset=utf-8");
+
+include('conexion.php');
+$conn = Conexion::conectar();
+
+
+
+
+?>
+
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
 
   <title>BizPage Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  
+  <meta charset="utf-8">
+
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,64 +44,166 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  
+  
+<style>
+    	
+    .wrapper-modal {
+      height: 420px;
+      width: 654px;
+      margin: 50px auto;
+      border-radius: 7px 7px 7px 7px;
+      -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-img-modal {
+      float: left;
+      background-color: white;
+      height: 420px;
+      width: 327px;
+    }
+
+    .product-img-modal img {
+      border-radius: 7px 0 0 7px;
+    }
+
+    .product-info-modal {
+      float: left;
+      height: 420px;
+      width: 327px;
+      border-radius: 0 7px 10px 7px;
+      background-color: #ffffff;
+    }
+
+    .product-text-modal {
+      height: 300px;
+      width: 327px;
+    }
+
+    .product-text-modal h1 {
+      margin: 0 0 0 38px;
+      padding-top: 52px;
+      font-size: 34px;
+      color: #474747;
+    }
+
+    .product-text-modal h1,
+    .product-price-btn-modal p {
+      /* font-family: 'Bentham', serif; */
+    }
+
+    .product-text-modal h2 {
+      margin: 0 0 47px 38px;
+      font-size: 13px;
+      /* font-family: 'Raleway', sans-serif; */
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #d2d2d2;
+      letter-spacing: 0.2em;
+    }
+
+    .product-text-modal p {
+      height: 125px;
+      margin: 0 0 0 38px;
+      /* font-family: 'Playfair Display', serif; */
+      color: #8d8d8d;
+      line-height: 1.7em;
+      font-size: 15px;
+      font-weight: lighter;
+      overflow: hidden;
+    }
+
+    .product-price-btn-modal {
+      height: 103px;
+      width: 327px;
+      margin-top: 17px;
+      position: relative;
+    }
+
+    .product-price-btn-modal p {
+      display: inline-block;
+      position: absolute;
+      top: -13px;
+      height: 50px;
+      /* font-family: 'Trocchi', serif; */
+      margin: 0 0 0 38px;
+      font-size: 28px;
+      font-weight: lighter;
+      color: #474747;
+    }
+
+    .modal-span {
+      display: inline-block;
+      height: 50px;
+      /* font-family: 'Suranna', serif; */
+      font-size: 34px;
+    }
+
+    .product-price-btn-modal button {
+      float: right;
+      display: inline-block;
+      height: 50px;
+      width: 176px;
+      margin: 0 40px 0 16px;
+      box-sizing: border-box;
+      border: transparent;
+      border-radius: 60px;
+      /* font-family: 'Raleway', sans-serif; */
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #ffffff;
+      background-color: #2F6781;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .product-price-btn-modal button:hover {
+      background-color: black;
+    }
+</style>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
 
 <body>
     
-    <style>
-        
-        figure img{
-            width: 250px;
-            height: 250px;
-        }
-        
-    </style>
+  <style>
+    figure img{
+        width: 250px;
+        height: 250px;
+    }
+  </style>
 
+  <!-- ======= Header ======= -->
 
-
+ 
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
-  <!-- <header id="header" class="fixed-top d-flex align-items-center header-transparent"> -->
-  <div class="container-fluid">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-xl-11 d-flex align-items-center justify-content-between">
-          <!-- <h1 class="logo"><a href="index.html">BizPage</a></h1> -->
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="index.html" class="logo"><img src="assets/img/logo-vito.png" alt="" class="img-fluid"></a>
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a class="nav-link" href="index.php">Home</a></li>
-              <li><a class="nav-link" href="servicios.php">Servicios</a></li>
-              <li><a class="nav-link" href="nosotros.php">Nosotros</a></li>
-              <li class="dropdown"><a href="#" class="nav-link active"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                <li><a href="impresoras.php">Impresoras</a></li>
-                  <li><a href="escaneres.php">Escáneres</a></li>
-                  <li><a href="terminales.php">Terminales</a></li>
-                  <li><a href="consumibles.php">Consumibles</a></li>
-                  <li><a href="cctv.php">CCTV</a></li>
-                  <li><a href="computacion.php">Computación</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link" href="contacto.php">Contacto</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-        </div>
-      </div>
-    </div>
-  <!-- </header>  -->
+  
+  <?php
+    include("static/header.php");
+  
+  ?>
+
 </header> 
+
+
   <!-- ======= hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1200" data-bs-pause="true"> 
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1200" data-bs-pause="true"> 
 
         <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/escaner1.jpg)">
+        <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/escaner1.jpg)">
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
@@ -122,48 +242,119 @@
   </section><!-- End Hero Section -->
 
   <main id="main">
-
     
+  <style>
+    .swiper-slide img{
+     width:100%;
+     height:420px;
+     object-fit:cover;
+     object-position:50% 50%;
+    }
+  </style>
+  
+  
+<!-- Modal -->
+<div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="modal-product" aria-hidden="true">
+	<div class="modal-dialog" role="document" >
+	  <div class="modal-content" style="background-color: transparent;">
+			<div class="wrapper-modal">
+				<div class="product-img-modal">
+            <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide" >
+                      <img alt="" id="img-product-modal-change">
+                </div>
+
+            </div>
+				</div>
+					<div class="product-info-modal">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+							<span class="modal-span" aria-hidden="true">&times;</span>
+						  </button>
+					  <div class="product-text-modal">
+            
+						<h1 id="title-modal-aux">Zebra ZD421</h1>
+						<h2 id="sub-title-aux">Zebra Technologies</h2>
+            <p id="desc-modal-aux">            
+              Cada ZD421 viene estándar con USB y host USB, y ofrece Ethernet opcional, puerto serie y radio inalámbrico de dos bandas con wifi 802.11ac y Bluetooth 4.1.
+            </p>
+            
+          </div>
+					  <div class="product-price-btn-modal">
+            <a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text=Hola, estoy necesito información de:" target="_blank" id="hre-cotizar-modal"> 
+						<button type="button"> Cotizar </button>
+            </a>
+					  </div>
+					</div>
+			</div>
+	  	</div>
+	</div>
+</div>
+  
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="section-bg">
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">Escáneres</h3>
+          <h3 class="section-title">Impresoras</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Uso general</li>
-            <li data-filter=".filter-card">Portátiles complementarios</li>
-            <li data-filter=".filter-web">Resistentes</li>
+            <li data-filter=".filter-Portatiles">Pórtatiles</li>
+            <li data-filter=".filter-Escritorio">Escritorio</li>
+            <li data-filter=".filter-Industrial">Industriales</li>
           </ul>
         </div>
       </div>
 
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <?php
+            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
+            foreach ($conn->query($sql) as $row) {
+        ?>
+        
+        
+    
+        <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
+      
+        <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $row['nombreCategoria']?>">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/cs60.jpg" class="img-fluid" alt="">
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="<?php echo $row['preview_img'];?>" class="img-fluid" alt="">
             </figure>
 
-            <div class="portfolio-info">
+            <div class="portfolio-info" >
+              <h4><a href="portfolio-details.html"><?php echo $row['nombre']; ?></a></h4>
+              <p><?php echo $row['mini-desc'];  ?></p>
+            </div>
+          </div>
+        </div>
+        
+        <?php
+          }
+        ?>
+      
+<!--       
+        <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/zd421t.jpg" class="img-fluid" alt="">
+            </figure>
+
+            <div class="portfolio-info" >
               <h4><a href="portfolio-details.html">Zebra ZD421</a></h4>
-              <p>300 dpi, USB - Ethernet</p>
+              <p>Térmica Directa 203x203DPI USB-Ethernet-BT</p>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/ds2208.jpg" class="img-fluid" alt="" >
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="assets/img/portfolio/tlpzk1.jpg" class="img-fluid" alt="" >
             </figure>
 
             <div class="portfolio-info">
@@ -172,13 +363,12 @@
             </div>
           </div>
         </div>
+        </a>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-industriales">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/cs4600.jpg" class="img-fluid" alt="" >
-              <a href="assets/img/portfolio/cs4600.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="App 2"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="assets/img/portfolio/zt400.jpg" class="img-fluid" alt="" >
             </figure>
 
             <div class="portfolio-info">
@@ -188,12 +378,10 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-industriales">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/ls1203.jpg" class="img-fluid" alt="" >
-              <a href="assets/img/portfolio/ls1203.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Card 2"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="assets/img/portfolio/220xi.jpg" class="img-fluid" alt="" >
             </figure>
 
             <div class="portfolio-info">
@@ -203,12 +391,10 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-industriales">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/ds9300.jpg" class="img-fluid" alt="" >
-              <a href="assets/img/portfolio/ds9300.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Web 2"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="assets/img/portfolio/zt421.png" class="img-fluid" alt="" >
             </figure>
 
             <div class="portfolio-info">
@@ -218,12 +404,10 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/ds9909.jpg" class="img-fluid" alt="">
-              <a href="assets/img/portfolio/ds9909.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="App 3"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="assets/img/portfolio/zd220.jpg" class="img-fluid" alt="">
             </figure>
 
             <div class="portfolio-info">
@@ -233,12 +417,10 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-portatiles">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/mp7000.jpg" class="img-fluid" alt="">
-              <a href="assets/img/portfolio/mp7000.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Card 1"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="assets/img/portfolio/zq600.jpg" class="img-fluid" alt="">
             </figure>
 
             <div class="portfolio-info">
@@ -248,12 +430,10 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-portatiles">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/ds3600-kd.png" class="img-fluid" alt="">
-              <a href="assets/img/portfolio/ds3600-kd.png" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Card 3"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="assets/img/portfolio/zq200.jpg" class="img-fluid" alt="">
             </figure>
 
             <div class="portfolio-info">
@@ -263,12 +443,10 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-portatiles">
           <div class="portfolio-wrap">
             <figure>
-              <img src="assets/img/portfolio/ds457.png" class="img-fluid" alt="">
-              <a href="assets/img/portfolio/ds457.png" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Web 1"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+              <img src="assets/img/portfolio/qln420.jpg" class="img-fluid" alt="">
             </figure>
 
             <div class="portfolio-info">
@@ -276,13 +454,17 @@
               <p>Web</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
       </div>
     </section><!-- End Portfolio Section -->
 
+    
+    
+    
+    
     <!-- ======= Call To Action Section ======= -->
     <section id="call-to-action">
         <div class="container text-center" data-aos="zoom-in">
@@ -293,90 +475,110 @@
       </section><!-- End Call To Action Section -->
   
   </main><!-- End #main -->
+  
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
+  <script>
+    
+    var auxImage = 0;
+    var intervalxd;
+    
+    function changeDetails(title, sub_title, desc, preview){
+      
+      document.getElementById("hre-cotizar-modal").href= "https://web.whatsapp.com/send?phone=528117413496&text=Hola, necesito información de " + title + " de la marca " + sub_title;
+      document.getElementById("title-modal-aux").innerHTML= title;
+      document.getElementById("sub-title-aux").innerHTML= sub_title;
+      document.getElementById("desc-modal-aux").innerHTML= desc;
+      document.getElementById("img-product-modal-change").src= preview;
+      
+    }
+    
+    function openProductModal(id){
+      getDetailsFromProduct(id);
+      getImagesFromProducts(id);
+      
+    }
+    
+    function getDetailsFromProduct(id){
+      
+      $.ajax({
+        url: 'request-db-detailes.php', 
+        type: "POST",
+        data: {id},
+        success: function(data){
+          changeDetails(data['nombre'], data['nombreMarca'], data['desc'], data['preview_img']);
+          // alert(data['nombreMarca']);
+          // alert(data['nombre']);
+          // alert(data['desc']);
+        }, error: function(data){
+          console.log(data);
+        }
+        
+      });
+    }
+    
+    function getImagesFromProducts(id){
+ 
+      let images = [];
+      
+      $.ajax({
+        url: 'request-db-img.php', 
+        type: "POST",
+        data: {id},
+        success: function(data){
+
+          for (let index = 0; index < data.length; index++) {
+            images[index] = data[index];
+          }
+          changeImage(images);
+        }, error: function(data){
+          console.log(data);
+        }
+        
+      });
+    }
+    
+    
+    
+    
+    function changeImage(images){
+      let i = 0;
+      intervalxd = setInterval(() => {
+            i = i < images.length ? i : 0;
+            document.getElementById("img-product-modal-change").src= images[i];
+            i++;
+        }, 1000);
+    }
+    
+    
+    
+  </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+<script>
+      $('#modal-product').on('hidden.bs.modal', function (e) {
+        clearInterval(intervalxd);
+      })
+</script>
+    
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+  <?php
+      include("static/footer.php"); 
+      include("static/links-js.php"); 
+  ?>
 
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Vito Technologies</h3>
-            <p>
-                Síguenos a continuación en nuestras redes sociales o también puedes comunicarte con nosotros enviando un correo electrónico y contestaremos lo más rápido posible, muchas gracias por considerarnos.
-
-
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              El Carmen, Nuevo León <br>
-              C.P 66583<br>
-              Buena Vista <br>
-              <strong>Tel. o WhatsApp:</strong> (81)-174-13-496<br>
-              <strong>Email:</strong> contacto@vitotechnologies.com<br>
-            </p>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Mantente al pendiente de nuestras ofertas</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Vito Technologies 2022</strong>. Todos los derechos reservados
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  
-  
   
 
 </body>

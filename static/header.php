@@ -10,23 +10,27 @@
           <a href="index.html" class="logo"><img src="assets/img/logo-vito.png" alt="" class="img-fluid"></a>
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-              <li><a class="nav-link scrollto" href="#about">Servicios</a></li>
-              <li><a class="nav-link scrollto" href="#services">Nosotros</a></li>
-              <li><a class="nav-link scrollto" href="#team">Nuestro equipo</a></li>
+              <li><a class="nav-link active" href="index.php">Home</a></li>
+              <li><a class="nav-link" href="servicios.php">Servicios</a></li>
+              <li><a class="nav-link" href="nosotros.php">Nosotros</a></li>
               <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="impresoras.php">Impresoras</a></li>
+                <li><a href="impresoras.php">Impresoras</a></li>
                   <li><a href="escaneres.php">Escáneres</a></li>
+                  <li><a href="terminales.php">Terminales</a></li>
+                  <li><a href="consumibles.php">Consumibles</a></li>
+                  <li><a href="cctv.php">CCTV</a></li>
+                  <li><a href="computacion.php">Computación</a></li>
                 </ul>
               </li>
-              <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+              <li><a class="nav-link" href="contacto.php">Contacto</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
         </div>
       </div>
     </div>
+  <!-- </header>  -->
   <!-- </header>  -->
 <!-- End Header -->
 

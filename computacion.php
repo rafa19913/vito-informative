@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+header("Content-Type: text/html;charset=utf-8");
+
+include('conexion.php');
+$conn = Conexion::conectar();
+
+
+
+
+?>
+
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
 
   <title>BizPage Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  
+  <meta charset="utf-8">
+
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -27,74 +45,186 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   
+  
+  
+<style>
+    	
+    .wrapper-modal {
+      height: 420px;
+      width: 654px;
+      margin: 50px auto;
+      border-radius: 7px 7px 7px 7px;
+      -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-img-modal {
+      float: left;
+      background-color: white;
+      height: 420px;
+      width: 327px;
+    }
+
+    .product-img-modal img {
+      border-radius: 7px 0 0 7px;
+    }
+
+    .product-info-modal {
+      float: left;
+      height: 420px;
+      width: 327px;
+      border-radius: 0 7px 10px 7px;
+      background-color: #ffffff;
+    }
+
+    .product-text-modal {
+      height: 300px;
+      width: 327px;
+    }
+
+    .product-text-modal h1 {
+      margin: 0 0 0 38px;
+      padding-top: 52px;
+      font-size: 34px;
+      color: #474747;
+    }
+
+    .product-text-modal h1,
+    .product-price-btn-modal p {
+      /* font-family: 'Bentham', serif; */
+    }
+
+    .product-text-modal h2 {
+      margin: 0 0 47px 38px;
+      font-size: 13px;
+      /* font-family: 'Raleway', sans-serif; */
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #d2d2d2;
+      letter-spacing: 0.2em;
+    }
+
+    .product-text-modal p {
+      height: 125px;
+      margin: 0 0 0 38px;
+      /* font-family: 'Playfair Display', serif; */
+      color: #8d8d8d;
+      line-height: 1.7em;
+      font-size: 15px;
+      font-weight: lighter;
+      overflow: hidden;
+    }
+
+    .product-price-btn-modal {
+      height: 103px;
+      width: 327px;
+      margin-top: 17px;
+      position: relative;
+    }
+
+    .product-price-btn-modal p {
+      display: inline-block;
+      position: absolute;
+      top: -13px;
+      height: 50px;
+      /* font-family: 'Trocchi', serif; */
+      margin: 0 0 0 38px;
+      font-size: 28px;
+      font-weight: lighter;
+      color: #474747;
+    }
+
+    .modal-span {
+      display: inline-block;
+      height: 50px;
+      /* font-family: 'Suranna', serif; */
+      font-size: 34px;
+    }
+
+    .product-price-btn-modal button {
+      float: right;
+      display: inline-block;
+      height: 50px;
+      width: 176px;
+      margin: 0 40px 0 16px;
+      box-sizing: border-box;
+      border: transparent;
+      border-radius: 60px;
+      /* font-family: 'Raleway', sans-serif; */
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #ffffff;
+      background-color: #2F6781;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .product-price-btn-modal button:hover {
+      background-color: black;
+    }
+</style>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
-<header id="header" class="fixed-top d-flex align-items-center header-transparent">
-  <!-- <header id="header" class="fixed-top d-flex align-items-center header-transparent"> -->
-  <div class="container-fluid">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-xl-11 d-flex align-items-center justify-content-between">
-          <!-- <h1 class="logo"><a href="index.html">BizPage</a></h1> -->
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="index.html" class="logo"><img src="assets/img/logo-vito.png" alt="" class="img-fluid"></a>
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a class="nav-link" href="index.php">Home</a></li>
-              <li><a class="nav-link active" href="servicios.php">Servicios</a></li>
-              <li><a class="nav-link" href="nosotros.php">Nosotros</a></li>
-              <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                <li><a href="impresoras.php">Impresoras</a></li>
-                  <li><a href="escaneres.php">Escáneres</a></li>
-                  <li><a href="terminales.php">Terminales</a></li>
-                  <li><a href="consumibles.php">Consumibles</a></li>
-                  <li><a href="cctv.php">CCTV</a></li>
-                  <li><a href="computacion.php">Computación</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link" href="contacto.php">Contacto</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-        </div>
-      </div>
-    </div>
-  <!-- </header>  -->
+
+<body>
+    
+  <style>
+    figure img{
+        width: 250px;
+        height: 250px;
+    }
+  </style>
+
+  <!-- ======= Header ======= -->
+
+
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  
+  <?php
+    include("static/header.php");
+  
+  ?>
+
 </header> 
 
 
   <!-- ======= hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="true" >
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1200" data-bs-pause="true"> 
 
         <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
-
-          <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/soporte1.jpg)">
+          <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/comp1.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Servicios </h2>
+                <h2 class="animate__animated animate__fadeInDown">Computación</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/soporte2.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/comp2.jpg)">
             <div class="carousel-container">
               <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Servicios </h2>
+                <h2 class="animate__animated animate__fadeInDown">Computación</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/soporte3.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/comp3.jpg)">
             <div class="carousel-container">
               <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Servicios </h2>
+                <h2 class="animate__animated animate__fadeInDown">Computación</h2>
               </div>
             </div>
           </div>
-
 
         </div>
 
@@ -109,207 +239,346 @@
       </div>
     </div>
   </section><!-- End Hero Section -->
-  
-<body>
-  <main id="main">
 
+  <main id="main">
+    
+  <style>
+    .swiper-slide img{
+     width:100%;
+     height:420px;
+     object-fit:cover;
+     object-position:50% 50%;
+    }
+  </style>
   
-<section id="about">
+  
+<!-- Modal -->
+<div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="modal-product" aria-hidden="true">
+	<div class="modal-dialog" role="document" >
+	  <div class="modal-content" style="background-color: transparent;">
+			<div class="wrapper-modal">
+				<div class="product-img-modal">
+            <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide" >
+                      <img alt="" id="img-product-modal-change">
+                </div>
+
+            </div>
+				</div>
+					<div class="product-info-modal">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+							<span class="modal-span" aria-hidden="true">&times;</span>
+						  </button>
+					  <div class="product-text-modal">
+            
+						<h1 id="title-modal-aux">Zebra ZD421</h1>
+						<h2 id="sub-title-aux">Zebra Technologies</h2>
+            <p id="desc-modal-aux">            
+              Cada ZD421 viene estándar con USB y host USB, y ofrece Ethernet opcional, puerto serie y radio inalámbrico de dos bandas con wifi 802.11ac y Bluetooth 4.1.
+            </p>
+            
+          </div>
+					  <div class="product-price-btn-modal">
+            <a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text=Hola, estoy necesito información de:" target="_blank" id="hre-cotizar-modal"> 
+						<button type="button"> Cotizar </button>
+            </a>
+					  </div>
+					</div>
+			</div>
+	  	</div>
+	</div>
+</div>
+  
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="section-bg">
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3>Servicios</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3 class="section-title">Impresoras</h3>
         </header>
 
-        <div class="row about-cols">
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class=" col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-Portatiles">Pórtatiles</li>
+            <li data-filter=".filter-Escritorio">Escritorio</li>
+            <li data-filter=".filter-Industrial">Industriales</li>
+          </ul>
+        </div>
+      </div>
 
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="about-col">
-              <div class="img">
-                <img src="assets/img/control-acceso.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="bi bi-person-bounding-box"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Controles de acceso</a></h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="about-col">
-              <div class="img">
-                <img src="assets/img/cableado-red.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="bi bi-hdd-network"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Cableado de red</a></h2>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              </p>
-            </div>
-          </div>
+        <?php
+            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
+            foreach ($conn->query($sql) as $row) {
+        ?>
+        
+        
+    
+        <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
+      
+        <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $row['nombreCategoria']?>">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="<?php echo $row['preview_img'];?>" class="img-fluid" alt="">
+            </figure>
 
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="about-col">
-              <div class="img">
-                <img src="assets/img/sw.jpeg" alt="" class="img-fluid">
-                <div class="icon"><i class="bi bi-ethernet"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Software</a></h2>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-              </p>
+            <div class="portfolio-info" >
+              <h4><a href="portfolio-details.html"><?php echo $row['nombre']; ?></a></h4>
+              <p><?php echo $row['mini-desc'];  ?></p>
             </div>
           </div>
-          
-          
-          
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="about-col">
-              <div class="img">
-                <img src="assets/img/maquila.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="bi bi-archive"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Maquila</a></h2>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-              </p>
-            </div>
-          </div>
-          
-                
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="about-col">
-              <div class="img">
-                <img src="assets/img/soporte-zebra.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Soprte Técnico</a></h2>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-              </p>
-            </div>
-          </div>
-          
-                
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="about-col">
-              <div class="img">
-                <img src="assets/img/computacion.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="bi bi-pc-display-horizontal"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Computación</a></h2>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-              </p>
-            </div>
-          </div>
+        </div>
+        
+        <?php
+          }
+        ?>
+      
+<!--       
+        <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/zd421t.jpg" class="img-fluid" alt="">
+            </figure>
 
+            <div class="portfolio-info" >
+              <h4><a href="portfolio-details.html">Zebra ZD421</a></h4>
+              <p>Térmica Directa 203x203DPI USB-Ethernet-BT</p>
+            </div>
+          </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/tlpzk1.jpg" class="img-fluid" alt="" >
+            </figure>
+
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html">Zebra GC420T</a></h4>
+              <p>300 dpi, TT</p>
+            </div>
+          </div>
+        </div>
+        </a>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-industriales">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/zt400.jpg" class="img-fluid" alt="" >
+            </figure>
+
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html">Zebra RFID</a></h4>
+              <p>300 dpi TT, etc</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-industriales">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/220xi.jpg" class="img-fluid" alt="" >
+            </figure>
+
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html">Card 2</a></h4>
+              <p>Card</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-industriales">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/zt421.png" class="img-fluid" alt="" >
+            </figure>
+
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html">Web 2</a></h4>
+              <p>Web</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/zd220.jpg" class="img-fluid" alt="">
+            </figure>
+
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html">App 3</a></h4>
+              <p>App</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-portatiles">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/zq600.jpg" class="img-fluid" alt="">
+            </figure>
+
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html">Card 1</a></h4>
+              <p>Card</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-portatiles">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/zq200.jpg" class="img-fluid" alt="">
+            </figure>
+
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html">Card 3</a></h4>
+              <p>Card</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-portatiles">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="assets/img/portfolio/qln420.jpg" class="img-fluid" alt="">
+            </figure>
+
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html">Web 1</a></h4>
+              <p>Web</p>
+            </div>
+          </div>
+        </div> -->
+
       </div>
-    </section>
-        <!-- End About Us Section -->
-        
-        
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    
+    
+    
+    
+    <!-- ======= Call To Action Section ======= -->
     <section id="call-to-action">
-      <div class="container text-center" data-aos="zoom-in">
-        <h3>Cotiza sin costo</h3>
-        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit expedita nostrum eius. Illum illo omnis minima, mollitia expedita, maiores maxime dicta ratione quam provident veniam voluptates nulla dolorem tempora repudiandae?</p>
-        <a class="cta-btn" href="#">Cotizar ahora</a>
-      </div>
-    </section>
-    
-    
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  
-  
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Vito Technologies</h3>
-            <p>
-                Síguenos a continuación en nuestras redes sociales o también puedes comunicarte con nosotros enviando un correo electrónico y contestaremos lo más rápido posible, muchas gracias por considerarnos.
-
-
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contáctanos</h4>
-            <p>
-              El Carmen, Nuevo León <br>
-              C.P 66583<br>
-              Buena Vista <br>
-              <strong>Tel. o WhatsApp:</strong> (81)-174-13-496<br>
-              <strong>Email:</strong> contacto@vitotechnologies.com<br>
-            </p>
-
-            <div class="social-links">
-              <a href="https://www.facebook.com/VITOTECHNOLOGIES" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/vito_technologies/" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola,%20quisiera%20informaci%C3%B3n" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
-              <a href="https://www.youtube.com/channel/UCvklhpONJClrvObOxqd9uuA" class="youtube"><i class="bi bi-youtube"></i></a>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Mantente al pendiente de nuestras ofertas</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
+        <div class="container text-center" data-aos="zoom-in">
+          <h3>Cotiza sin costo</h3>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit expedita nostrum eius. Illum illo omnis minima, mollitia expedita, maiores maxime dicta ratione quam provident veniam voluptates nulla dolorem tempora repudiandae?</p>
+          <a class="cta-btn" href="#">Cotizar ahora</a>
         </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Vito Technologies 2022</strong>. Todos los derechos reservados
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      </section><!-- End Call To Action Section -->
+  
+  </main><!-- End #main -->
   
   
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
 
+  <script>
+    
+    var auxImage = 0;
+    var intervalxd;
+    
+    function changeDetails(title, sub_title, desc, preview){
+      
+      document.getElementById("hre-cotizar-modal").href= "https://web.whatsapp.com/send?phone=528117413496&text=Hola, necesito información de " + title + " de la marca " + sub_title;
+      document.getElementById("title-modal-aux").innerHTML= title;
+      document.getElementById("sub-title-aux").innerHTML= sub_title;
+      document.getElementById("desc-modal-aux").innerHTML= desc;
+      document.getElementById("img-product-modal-change").src= preview;
+      
+    }
+    
+    function openProductModal(id){
+      getDetailsFromProduct(id);
+      getImagesFromProducts(id);
+      
+    }
+    
+    function getDetailsFromProduct(id){
+      
+      $.ajax({
+        url: 'request-db-detailes.php', 
+        type: "POST",
+        data: {id},
+        success: function(data){
+          changeDetails(data['nombre'], data['nombreMarca'], data['desc'], data['preview_img']);
+          // alert(data['nombreMarca']);
+          // alert(data['nombre']);
+          // alert(data['desc']);
+        }, error: function(data){
+          console.log(data);
+        }
+        
+      });
+    }
+    
+    function getImagesFromProducts(id){
  
+      let images = [];
+      
+      $.ajax({
+        url: 'request-db-img.php', 
+        type: "POST",
+        data: {id},
+        success: function(data){
+
+          for (let index = 0; index < data.length; index++) {
+            images[index] = data[index];
+          }
+          changeImage(images);
+        }, error: function(data){
+          console.log(data);
+        }
+        
+      });
+    }
+    
+    
+    
+    
+    function changeImage(images){
+      let i = 0;
+      intervalxd = setInterval(() => {
+            i = i < images.length ? i : 0;
+            document.getElementById("img-product-modal-change").src= images[i];
+            i++;
+        }, 1000);
+    }
+    
+    
+    
+  </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+<script>
+      $('#modal-product').on('hidden.bs.modal', function (e) {
+        clearInterval(intervalxd);
+      })
+</script>
+    
+  <!-- ======= Footer ======= -->
+  <?php
+      include("static/footer.php"); 
+      include("static/links-js.php"); 
+  ?>
+
+  
 
 </body>
 
