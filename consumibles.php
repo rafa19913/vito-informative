@@ -296,16 +296,16 @@ $conn = Conexion::conectar();
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">Impresoras</h3>
+          <h3 class="section-title">Consumibles</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Portatiles">Pórtatiles</li>
-            <li data-filter=".filter-Escritorio">Escritorio</li>
-            <li data-filter=".filter-Industrial">Industriales</li>
+            <li data-filter=".filter-Portatiles">Etiquetas</li>
+            <li data-filter=".filter-Escritorio">Ribbon</li>
+            <li data-filter=".filter-Industrial">Toner y tinta</li>
           </ul>
         </div>
       </div>
@@ -313,11 +313,11 @@ $conn = Conexion::conectar();
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
         <?php
-            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
-            foreach ($conn->query($sql) as $row) {
+            // $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
+            // foreach ($conn->query($sql) as $row) {
         ?>
         
-        
+<!--         
     
         <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
       
@@ -332,10 +332,10 @@ $conn = Conexion::conectar();
               <p><?php echo $row['mini-desc'];  ?></p>
             </div>
           </div>
-        </div>
+        </div> -->
         
         <?php
-          }
+          // }
         ?>
       
 <!--       
