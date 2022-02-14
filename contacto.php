@@ -44,8 +44,12 @@
               <li><a class="nav-link" href="nosotros.php">Nosotros</a></li>
               <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="impresoras.php">Impresoras</a></li>
+                <li><a href="impresoras.php">Impresoras</a></li>
                   <li><a href="escaneres.php">Escáneres</a></li>
+                  <li><a href="terminales.php">Terminales</a></li>
+                  <li><a href="consumibles.php">Consumibles</a></li>
+                  <li><a href="cctv.php">CCTV</a></li>
+                  <li><a href="computacion.php">Computación</a></li>
                 </ul>
               </li>
               <li><a class="nav-link active" href="contacto.php">Contacto</a></li>

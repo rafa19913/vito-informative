@@ -2,6 +2,8 @@
 <html lang="en">
 
 <?php
+header("Content-Type: text/html;charset=utf-8");
+
 include('conexion.php');
 $conn = Conexion::conectar();
 
@@ -14,10 +16,16 @@ $conn = Conexion::conectar();
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
 
   <title>BizPage Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  
+  <meta charset="utf-8">
+
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -190,8 +198,12 @@ $conn = Conexion::conectar();
               <li><a class="nav-link" href="nosotros.php">Nosotros</a></li>
               <li class="dropdown"><a href="#" class="nav-link active"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="impresoras.php" >Impresoras</a></li>
+                <li><a href="impresoras.php">Impresoras</a></li>
                   <li><a href="escaneres.php">Escáneres</a></li>
+                  <li><a href="terminales.php">Terminales</a></li>
+                  <li><a href="consumibles.php">Consumibles</a></li>
+                  <li><a href="cctv.php">CCTV</a></li>
+                  <li><a href="computacion.php">Computación</a></li>
                 </ul>
               </li>
               <li><a class="nav-link" href="contacto.php">Contacto</a></li>
@@ -261,22 +273,17 @@ $conn = Conexion::conectar();
      object-position:50% 50%;
     }
   </style>
-
+  
+  
 <!-- Modal -->
 <div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="modal-product" aria-hidden="true">
 	<div class="modal-dialog" role="document" >
-	  <div class="modal-content" style="width:50px; height:1px; margin-top: -50px;">
+	  <div class="modal-content" style="background-color: transparent;">
 			<div class="wrapper-modal">
-        
 				<div class="product-img-modal">
-        
             <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide" >
-                       <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
-                      <img src="assets/img/modal-img/zd421_1.png" alt="" id="img-product-modal-change">
-                      <!-- <img src="assets/img/modal-img/zd421_2.jpg" alt="">
-                      <img src="assets/img/modal-img/zd421_3.jpg" alt=""> -->
-
+                      <img alt="" id="img-product-modal-change">
                 </div>
 
             </div>
@@ -295,8 +302,9 @@ $conn = Conexion::conectar();
             
           </div>
 					  <div class="product-price-btn-modal">
-						<!-- <p><span class="modal-span">78</span>$</p> -->
-						<button type="button">Más información</button>
+            <a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text=Hola, estoy necesito información de:" target="_blank" id="hre-cotizar-modal"> 
+						<button type="button"> Cotizar </button>
+            </a>
 					  </div>
 					</div>
 			</div>
@@ -313,6 +321,7 @@ foreach ($conn->query($sql) as $row) {
   -->
 
   
+  
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="section-bg">
       <div class="container" data-aos="fade-up">
@@ -325,27 +334,42 @@ foreach ($conn->query($sql) as $row) {
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-portatiles">Pórtatiles</li>
-            <li data-filter=".filter-escritorio">Escritorio</li>
-            <li data-filter=".filter-industriales">Industriales</li>
+            <li data-filter=".filter-Portatiles">Pórtatiles</li>
+            <li data-filter=".filter-Escritorio">Escritorio</li>
+            <li data-filter=".filter-Industrial">Industriales</li>
           </ul>
         </div>
       </div>
 
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-      
-      <a href="productos/impresoras/zd421.php" data-toggle="modal" data-target="#modal-product" onClick="openProductModal();">
-        
-      
-      
+
         <?php
-            $sql = "SELECT * FROM productos";
+            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
             foreach ($conn->query($sql) as $row) {
-                print $row['nombre'] . "\n";
-            }
+        ?>
+        
+        
+    
+        <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
+      
+        <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $row['nombreCategoria']?>">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="<?php echo $row['preview_img'];?>" class="img-fluid" alt="">
+            </figure>
+
+            <div class="portfolio-info" >
+              <h4><a href="portfolio-details.html"><?php echo $row['nombre']; ?></a></h4>
+              <p><?php echo $row['mini-desc'];  ?></p>
+            </div>
+          </div>
+        </div>
+        
+        <?php
+          }
         ?>
       
-      
+<!--       
         <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
           <div class="portfolio-wrap">
             <figure>
@@ -462,7 +486,7 @@ foreach ($conn->query($sql) as $row) {
               <p>Web</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -488,55 +512,99 @@ foreach ($conn->query($sql) as $row) {
   
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
-   
-  <!-- <h1 id="title-modal-aux">Zebra ZD421</h1>
-						<h2 id="sub-title-aux">Zebra Technologies</h2>
-            <p id="desc-modal-aux">            
-              Cada ZD421 viene estándar con USB y host USB, y ofrece Ethernet opcional, puerto serie y radio inalámbrico de dos bandas con wifi 802.11ac y Bluetooth 4.1.
-  </p> -->
+
+
   <script>
     
-    function openProductModal(title, subtitle, desc){
+    var auxImage = 0;
+    var intervalxd;
+    
+    function changeDetails(title, sub_title, desc, preview){
       
-      // var images = [];
-      //   images[0] = "assets/img/modal-img/zd421_1.png";
-      //   images[1] = "assets/img/modal-img/zd421_2.jpg";
-      //   images[2] = "assets/img/modal-img/zd421_3.jpg";
-      // alert('alo');
-      var fs = require('fs');
-      var files = fs.readdirSync('/assets/img/');
-        
-      
-      alert(files);
-      
-      // changeImage(images);
-      // document.getElementById("title-modal-aux").innerHTML = title;
-      // document.getElementById("sub-title-aux").innerHTML = subtitle;
-      // document.getElementById("desc-modal-aux").innerHTML = desc;
-
+      document.getElementById("hre-cotizar-modal").href= "https://web.whatsapp.com/send?phone=528117413496&text=Hola, necesito información de " + title + " de la marca " + sub_title;
+      document.getElementById("title-modal-aux").innerHTML= title;
+      document.getElementById("sub-title-aux").innerHTML= sub_title;
+      document.getElementById("desc-modal-aux").innerHTML= desc;
+      document.getElementById("img-product-modal-change").src= preview;
       
     }
     
+    function openProductModal(id){
+      getDetailsFromProduct(id);
+      getImagesFromProducts(id);
+      
+    }
     
-    function changeImage (images){
-        var i = 0;
-        setInterval(fadeDivs, 1200);
-        function fadeDivs() {
+    function getDetailsFromProduct(id){
+      
+      $.ajax({
+        url: 'request-db-detailes.php', 
+        type: "POST",
+        data: {id},
+        success: function(data){
+          changeDetails(data['nombre'], data['nombreMarca'], data['desc'], data['preview_img']);
+          // alert(data['nombreMarca']);
+          // alert(data['nombre']);
+          // alert(data['desc']);
+        }, error: function(data){
+          console.log(data);
+        }
+        
+      });
+    }
+    
+    function getImagesFromProducts(id){
+ 
+      let images = [];
+      
+      $.ajax({
+        url: 'request-db-img.php', 
+        type: "POST",
+        data: {id},
+        success: function(data){
+
+          for (let index = 0; index < data.length; index++) {
+            images[index] = data[index];
+          }
+          changeImage(images);
+        }, error: function(data){
+          console.log(data);
+        }
+        
+      });
+    }
+    
+    
+    
+    
+    function changeImage(images){
+      let i = 0;
+      intervalxd = setInterval(() => {
             i = i < images.length ? i : 0;
-            console.log(i)
-            // document.getElementById("img-product-modal-change").fadeIn();
             document.getElementById("img-product-modal-change").src= images[i];
             i++;
-          }
+        }, 1000);
     }
-
+    
+    
+    
   </script>
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+<script>
+      $('#modal-product').on('hidden.bs.modal', function (e) {
+        clearInterval(intervalxd);
+      })
+</script>
+    
   <!-- ======= Footer ======= -->
   <?php
       include("static/footer.php"); 

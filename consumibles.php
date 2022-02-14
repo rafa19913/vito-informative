@@ -83,26 +83,26 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/escaner1.jpg)">
+          <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/c4.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Consumibles</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/escaner2.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/c2.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Consumibles</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/escaner3.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/c3.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Consumibles</h2>
               </div>
             </div>
           </div>
@@ -129,16 +129,16 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">Escáneres</h3>
+          <h3 class="section-title">Consumibles</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Uso general</li>
-            <li data-filter=".filter-card">Portátiles complementarios</li>
-            <li data-filter=".filter-web">Resistentes</li>
+            <li data-filter="*" class="filter-active">Todos</li>
+            <li data-filter=".filter-Etiquetas">Etiquetas</li>
+            <li data-filter=".filter-Ribbon">Ribbon</li>
+            <li data-filter=".filter-Toner_Tinta">Toner y Tinta</li>
           </ul>
         </div>
       </div>
