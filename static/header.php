@@ -11,20 +11,22 @@
           <a href="index.html" class="logo"><img src="assets/img/logo-vito.png" alt="" class="img-fluid"></a>
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link active" href="index.php">Home</a></li>
+              <li><a class="nav-link" href="index.php">Home</a></li>
               <li><a class="nav-link" href="servicios.php">Servicios</a></li>
               <li><a class="nav-link" href="nosotros.php">Nosotros</a></li>
-              <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                <li><a href="impresoras.php">Impresoras</a></li>
+              <li class="dropdown"><a class="nav-link" href="#" id="productos"><span>Productos</span> <i class="bi bi-chevron-down"></i></a>
+                <ul id="ul-productos">
+                  <li><a href="impresoras.php">Impresoras</a></li>
                   <li><a href="escaneres.php">Escáneres</a></li>
                   <li><a href="terminales.php">Terminales</a></li>
                   <li><a href="consumibles.php">Consumibles</a></li>
-                  <li><a href="cctv.php">CCTV</a></li>
-                  <li><a href="computacion.php">Computación</a></li>
+                  <li><a href="seguridad.php">Seguridad</a></li>
+                  <li><a href="computacion.php">Cómputo</a></li>
+                  <li><a href="redes.php">Redes</a></li>
+                  <li><a href="proteccion-energia.php">Protección y energía</a></li>
                 </ul>
               </li>
-              <li><a class="nav-link" href="contacto.php">Contacto</a></li>
+              <li><a class="nav-link" id="contacto" href="contacto.php">Contacto</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -32,50 +34,43 @@
       </div>
     </div>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        $('a').click(function() {
-          // var activeAs = $(".nav-link");
-          
-          if (this.toString().indexOf("servicios") > -1){
-            
-          }else if(this.toString().indexOf("servicios") > -1){
-            
-          }else if(this.toString().indexOf("nosotros") > -1){
-            
-          }else if(this.toString().indexOf("contacto") > -1){
-            
-          }else{
-            
-          }
-          
-          
-          // alert(JSON.stringify(activeAs[0]));
-          // alert(this);
-          // $(this).removeClass('active');
-          // alert(this);
-          // alert(this);
-          
-          // for (let index = 0; index < activeAs.length; index++) {
-            // const element = array[index];
-            // alert(activeAs[3]);
-            
-          // }
-          
-          // alert(activeAs);
-          // $('ul').find('li.active').removeClass('active');
-        // alert(this);
-        //  $(this).parents("a").addClass('active');
-          
-        });
-    });
-    
-    
-    
-</script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
+    <script>
+      
+      function detectActiveMenuDropDown(){
+        
+        var current = location.pathname;
+        current = current.replace('/', '');
+        current = current.toString();
+        var auxExample = "";
+        
+        $('#navbar li a').each(function(){
+            var $this = $(this);
+            if($this.attr('href').indexOf(current) !== -1){
+                $this.addClass('active');
+                auxExample = $this.attr('href');
+            }
+        })
+        
+        if (auxExample == 'seguridad.php' || auxExample == 'impresoras.php' || auxExample == 'escaneres.php' || auxExample == 'terminales.php'  || auxExample == 'proteccion-energia.php'  || auxExample == 'computacion.php' || auxExample == 'redes.php' || auxExample == 'consumibles.php'){
+          document.getElementById("productos").classList.add("active");
+        }
+        
+      }
+      
+      
+      
+      detectActiveMenuDropDown();
+      
+      
+    </script>
+    
 
 
     

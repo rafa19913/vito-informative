@@ -183,8 +183,9 @@ $conn = Conexion::conectar();
 
   <!-- ======= Header ======= -->
 
-
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  
+  
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
   
   <?php
     include("static/header.php");
@@ -202,10 +203,11 @@ $conn = Conexion::conectar();
         <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
+
           <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/comp1.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Computación</h2>
+                <h2 class="animate__animated animate__fadeInDown">Cómputo</h2>
               </div>
             </div>
           </div>
@@ -213,7 +215,7 @@ $conn = Conexion::conectar();
           <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/comp2.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Computación</h2>
+                <h2 class="animate__animated animate__fadeInDown">Cómputo</h2>
               </div>
             </div>
           </div>
@@ -221,7 +223,7 @@ $conn = Conexion::conectar();
           <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/comp3.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Computación</h2>
+                <h2 class="animate__animated animate__fadeInDown">Cómputo</h2>
               </div>
             </div>
           </div>
@@ -294,16 +296,18 @@ $conn = Conexion::conectar();
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">Computación</h3>
+          <h3 class="section-title">Impresoras</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Portatiles">Hardware</li>
+            <li data-filter=".filter-Portatiles">Laptops</li>
             <li data-filter=".filter-Escritorio">Computadoras</li>
-            <li data-filter=".filter-Industrial">Laptops</li>
+            <li data-filter=".filter-Industrial">Accesorios</li>
+            <li data-filter=".filter-Industrial">Insumos</li>
+            <li data-filter=".filter-Industrial">Gaming</li>
           </ul>
         </div>
       </div>
@@ -311,12 +315,12 @@ $conn = Conexion::conectar();
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
         <?php
-            // $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
-            // foreach ($conn->query($sql) as $row) {
+            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
+            foreach ($conn->query($sql) as $row) {
         ?>
         
         
-<!--     
+    
         <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
       
         <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $row['nombreCategoria']?>">
@@ -330,10 +334,10 @@ $conn = Conexion::conectar();
               <p><?php echo $row['mini-desc'];  ?></p>
             </div>
           </div>
-        </div> -->
+        </div>
         
         <?php
-          // }
+          }
         ?>
       
 <!--       

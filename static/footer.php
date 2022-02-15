@@ -1,4 +1,31 @@
+<style>
+      
+      .float{
+    	position:fixed;
+    	width:60px;
+    	height:60px;
+    	bottom:40px;
+    	left:40px;
+    	background-color:#25d366;
+    	color:#FFF;
+    	border-radius:50px;
+    	text-align:center;
+      font-size:30px;
+    	box-shadow: 2px 2px 3px #999;
+      z-index:100;
+}
 
+  .my-float{
+  	margin-top:16px;
+  }
+    
+  </style>
+  
+  <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+    <i class="my-float bi bi-whatsapp"></i>
+  </a>
+  
+  
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -18,11 +45,10 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.php">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="nosotros.php">Nosotros</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="servicios.php">Servicios</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="contacto.php">Contacto</a></li>
             </ul>
           </div>
 
@@ -48,9 +74,9 @@
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Mantente al pendiente de nuestras ofertas</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <p> Suscríbete y sé de nuestros primero clientes en saber todas nuestras ofertas diarías, únicamente registra tu correo electrónico aquí. </p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Registrarme">
             </form>
           </div>
 
@@ -66,3 +92,5 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+

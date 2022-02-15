@@ -181,10 +181,8 @@ $conn = Conexion::conectar();
     }
   </style>
 
-  <!-- ======= Header ======= -->
+<!-- ======= Header ======= -->
 
-
-  
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
   
   <?php
@@ -305,9 +303,11 @@ $conn = Conexion::conectar();
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Portatiles">De mano</li>
+            <li data-filter=".filter-Portatiles">Industriales</li>
             <li data-filter=".filter-Escritorio">Tabletas</li>
-            <li data-filter=".filter-Industrial">Lectores RFID</li>
+            <li data-filter=".filter-Industrial">RFID</li>
+            <li data-filter=".filter-Industrial">Almacén</li>
+            <li data-filter=".filter-Industrial">Uso general</li>
           </ul>
         </div>
       </div>

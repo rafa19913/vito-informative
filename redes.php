@@ -183,7 +183,8 @@ $conn = Conexion::conectar();
 
   <!-- ======= Header ======= -->
 
- 
+
+  
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
   
   <?php
@@ -203,26 +204,28 @@ $conn = Conexion::conectar();
 
         <div class="carousel-inner" role="listbox">
 
-        <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/escaner1.jpg)">
+        
+        
+        <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/redes1.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Redes</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/escaner2.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/redes2.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Redes</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/escaner3.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/redes3.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Redes</h2>
               </div>
             </div>
           </div>
@@ -295,16 +298,18 @@ $conn = Conexion::conectar();
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">Escáneres</h3>
+          <h3 class="section-title">Redes</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Portatiles">Uso general</li>
-            <li data-filter=".filter-Escritorio">Industrial</li>
-            <li data-filter=".filter-Industrial">Montaje fijo</li>
+            <li data-filter=".filter-Portatiles">Cableado estructurado</li>
+            <li data-filter=".filter-Escritorio">Servidores</li>
+            <li data-filter=".filter-Industrial">Accesorios</li>
+            <li data-filter=".filter-Industrial">Equipo WLAN / inalámbrico</li>
+            <li data-filter=".filter-Industrial">Networking</li>
           </ul>
         </div>
       </div>
@@ -316,11 +321,11 @@ $conn = Conexion::conectar();
             // foreach ($conn->query($sql) as $row) {
         ?>
         
-<!--         
+        
     
         <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
       
-        <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $row['nombreCategoria']?>">
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $row['nombreCategoria']?>">
           <div class="portfolio-wrap">
             <figure>
               <img src="<?php echo $row['preview_img'];?>" class="img-fluid" alt="">
@@ -331,8 +336,8 @@ $conn = Conexion::conectar();
               <p><?php echo $row['mini-desc'];  ?></p>
             </div>
           </div>
-        </div>
-         -->
+        </div> -->
+        
         <?php
           // }
         ?>

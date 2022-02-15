@@ -8,8 +8,6 @@ include('conexion.php');
 $conn = Conexion::conectar();
 
 
-
-
 ?>
 
 
@@ -179,10 +177,13 @@ $conn = Conexion::conectar();
         width: 250px;
         height: 250px;
     }
+  
+    
   </style>
 
   <!-- ======= Header ======= -->
 
+  
   
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
   
@@ -193,7 +194,6 @@ $conn = Conexion::conectar();
 
 </header> 
 
-  
 
   <!-- ======= hero Section ======= -->
   <section id="hero">
@@ -209,23 +209,23 @@ $conn = Conexion::conectar();
         <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/cam1.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">CCTV</h2>
+                <h2 class="animate__animated animate__fadeInDown">Seguridad</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/cam2.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/seguridad1.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">CCTV</h2>
+                <h2 class="animate__animated animate__fadeInDown">Seguridad</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/cam3.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/seguridad2.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">CCTV</h2>
+                <h2 class="animate__animated animate__fadeInDown">Seguridad</h2>
               </div>
             </div>
           </div>
@@ -298,16 +298,19 @@ $conn = Conexion::conectar();
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">CCTV</h3>
+          <h3 class="section-title">Seguridad</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Portatiles">Domo</li>
-            <li data-filter=".filter-Escritorio">Bala</li>
-            <li data-filter=".filter-Industrial">Profesionales</li>
+            <li data-filter=".filter-Portatiles">Control de Acceso</li>
+            <li data-filter=".filter-Escritorio">CCTV</li>
+            <li data-filter=".filter-Industrial">Videoporteros</li>
+            <li data-filter=".filter-Industrial">Alarmas</li>
+            <li data-filter=".filter-Industrial">Protección perimetral</li>
+            <li data-filter=".filter-Industrial">Radiocomunicación</li>
           </ul>
         </div>
       </div>
@@ -315,13 +318,13 @@ $conn = Conexion::conectar();
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
         <?php
-            // $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
-            // foreach ($conn->query($sql) as $row) {
+            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
+            foreach ($conn->query($sql) as $row) {
         ?>
         
         
     
-        <!-- <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
+        <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
       
         <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $row['nombreCategoria']?>">
           <div class="portfolio-wrap">
@@ -334,10 +337,10 @@ $conn = Conexion::conectar();
               <p><?php echo $row['mini-desc'];  ?></p>
             </div>
           </div>
-        </div> -->
+        </div>
         
         <?php
-          // }
+          }
         ?>
       
 <!--       
@@ -482,6 +485,8 @@ $conn = Conexion::conectar();
   
   
   
+  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 

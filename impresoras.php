@@ -7,10 +7,8 @@ header("Content-Type: text/html;charset=utf-8");
 include('conexion.php');
 $conn = Conexion::conectar();
 
-
-
-
 ?>
+
 
 
 <head>
@@ -44,6 +42,7 @@ $conn = Conexion::conectar();
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
   
   
   
@@ -253,7 +252,7 @@ $conn = Conexion::conectar();
   
   
 <!-- Modal -->
-<div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="modal-product" aria-hidden="true">
+<!-- <div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="modal-product" aria-hidden="true">
 	<div class="modal-dialog" role="document" >
 	  <div class="modal-content" style="background-color: transparent;">
 			<div class="wrapper-modal">
@@ -262,7 +261,6 @@ $conn = Conexion::conectar();
                 <div class="swiper-slide" >
                       <img alt="" id="img-product-modal-change">
                 </div>
-
             </div>
 				</div>
 					<div class="product-info-modal">
@@ -287,7 +285,38 @@ $conn = Conexion::conectar();
 			</div>
 	  	</div>
 	</div>
+</div> -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="title-modal-aux">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+              <img class="img-fluid" alt="" id="img-product-modal-change">
+            </div>
+            <div class="col-md-6">
+                  <h6 id="sub-title-aux"> <b>Marca</b>: Zebra Technologies</h6>
+                  <p id="desc-modal-aux">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsam eaque consequuntur cupiditate aperiam harum pariatur quam dicta exercitationem provident impedit reiciendis velit voluptas aut, nostrum laboriosam animi perferendis atque?</p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text=Hola, estoy necesito información de:" target="_blank" id="hre-cotizar-modal" type="button" class="btn btn-primary">Cotizar</a>
+      </div>
+    </div>
+  </div>
 </div>
+  
   
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="section-bg">
@@ -304,6 +333,8 @@ $conn = Conexion::conectar();
             <li data-filter=".filter-Portatiles">Pórtatiles</li>
             <li data-filter=".filter-Escritorio">Escritorio</li>
             <li data-filter=".filter-Industrial">Industriales</li>
+            <li data-filter=".filter-Industrial">Punto de venta</li>
+            <li data-filter=".filter-Industrial">De oficina</li>
           </ul>
         </div>
       </div>
@@ -474,6 +505,8 @@ $conn = Conexion::conectar();
       </section><!-- End Call To Action Section -->
   
   </main><!-- End #main -->
+  
+  
   
   
   

@@ -96,7 +96,7 @@
 
         <header class="section-header">
           <h3>Servicios</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Manejamos servicios profesionales de ingeniería para diversos equipos de diferentes marcas y modelos de impresión, computación, controles de acceso, entre otros. </p>
         </header>
 
         <div class="row about-cols">
@@ -109,7 +109,7 @@
               </div>
               <h2 class="title"><a href="#">Controles de acceso</a></h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                 Realizamos desde instalación completas desde cero hasta mantenimiento y/o reparación, venta de accesorios que componen dicho equipo (electrónicos, licencia de software, entre otros).    
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@
               </div>
               <h2 class="title"><a href="#">Cableado de red</a></h2>
               <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                Realizamos servicios de cableado estructurado interior/exterior de tipo par trenzado, fibra óptica y coaxial para cualquier tamaño de negocio / empresa.
               </p>
             </div>
           </div>
@@ -135,7 +135,7 @@
               </div>
               <h2 class="title"><a href="#">Software</a></h2>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                Desarrollamos sistemas empresarials a la medida en base a las necesidades de nuestros clientes, además del dominio y hosting administrado por nosotros.
               </p>
             </div>
           </div>
@@ -150,7 +150,7 @@
               </div>
               <h2 class="title"><a href="#">Maquila</a></h2>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                Venta de diversos consumibles e impresión de etiquetas y tarjetas PVC con grabación en RFID.
               </p>
             </div>
           </div>
@@ -164,7 +164,7 @@
               </div>
               <h2 class="title"><a href="#">Soprte Técnico</a></h2>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                Brindamos asistencia vía remóto o presencial para rosolver problemas con equipos como terminales portátiles, impresoras de etiquetas, handheld, entre otros.   
               </p>
             </div>
           </div>
@@ -178,7 +178,7 @@
               </div>
               <h2 class="title"><a href="#">Computación</a></h2>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                Hacemos mantenimiento, reparación y detección de problemas en cualquier equipo como Computadoras de escritorio, laptops, impresoras de oficina, etc. 
               </p>
             </div>
           </div>

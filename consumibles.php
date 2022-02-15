@@ -306,6 +306,7 @@ $conn = Conexion::conectar();
             <li data-filter=".filter-Portatiles">Etiquetas</li>
             <li data-filter=".filter-Escritorio">Ribbon</li>
             <li data-filter=".filter-Industrial">Toner y tinta</li>
+            <li data-filter=".filter-Industrial">Tarjetas PVC</li>
           </ul>
         </div>
       </div>

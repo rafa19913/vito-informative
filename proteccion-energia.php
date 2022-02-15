@@ -8,8 +8,6 @@ include('conexion.php');
 $conn = Conexion::conectar();
 
 
-
-
 ?>
 
 
@@ -183,12 +181,12 @@ $conn = Conexion::conectar();
 
   <!-- ======= Header ======= -->
 
- 
+
+  
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
   
   <?php
     include("static/header.php");
-  
   ?>
 
 </header> 
@@ -203,26 +201,28 @@ $conn = Conexion::conectar();
 
         <div class="carousel-inner" role="listbox">
 
-        <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/escaner1.jpg)">
+        
+        
+        <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/proteccion-energia-1.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Protección y energía</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/escaner2.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/proteccion-energia-2.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Protección y energía</h2>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/escaner3.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/proteccion-energia-3.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Escáneres</h2>
+                <h2 class="animate__animated animate__fadeInDown">Protección y energía</h2>
               </div>
             </div>
           </div>
@@ -295,28 +295,29 @@ $conn = Conexion::conectar();
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3 class="section-title">Escáneres</h3>
+          <h3 class="section-title">Protección y energía</h3>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Portatiles">Uso general</li>
-            <li data-filter=".filter-Escritorio">Industrial</li>
-            <li data-filter=".filter-Industrial">Montaje fijo</li>
-          </ul>
+            <li data-filter=".filter-Portatiles">Baterías</li>
+            <li data-filter=".filter-Escritorio">PDU / UPS / Respaldos</li>
+            <li data-filter=".filter-Industrial">Lamparas de emergencia</li>
+            <li data-filter=".filter-Industrial">Fuentes de poder</li> 
+           </ul>
         </div>
       </div>
 
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
         <?php
-            // $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
-            // foreach ($conn->query($sql) as $row) {
+            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
+            foreach ($conn->query($sql) as $row) {
         ?>
         
-<!--         
+        
     
         <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
       
@@ -332,9 +333,9 @@ $conn = Conexion::conectar();
             </div>
           </div>
         </div>
-         -->
+        
         <?php
-          // }
+          }
         ?>
       
 <!--       

@@ -105,52 +105,49 @@
 
         <header class="section-header wow fadeInUp">
           <h3>Bienvenidos</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
+          <p>Somos un equipo de profesionistas con cobertura en toda la república mexicana y nos dedicamos al ramo de tecnología para optimizar, automatizar y eficientar procesos de conectividad para pequeñas, medianas y grandes empresas en las áreas de</p>
         </header>
 
         <div class="row">
-
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <div class="icon"><i class="bi bi-printer"></i></div>
+            <h4 class="title"><a href="">Equipos de impresión</a></h4>
+            <p class="description">Ofrecemos diversas productos de diferentes marcas y categorias de impresión en base a las necesidades de nuestros clientes.  </p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <div class="icon"><i class="bi bi-cart4"></i></div>
+            <h4 class="title"><a href="">Puntos de venta</a></h4>
+            <p class="description">Ofrecemos desde un accesorio, software de punto de venta, hasta todo el kit completo para arrancar su negocio desde cero. </p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <div class="icon"><i class="bi bi-box-seam"></i></div>
+            <h4 class="title"><a href="">Consumibles</a></h4>
+            <p class="description">Ofrecemos todo tipo de consumibles para tu negocio (etiquetas, ribbon, tarjetas PVC, toner, entre otros).</p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <div class="icon"><i class="bi bi-bookmark-check"></i></div>
+            <h4 class="title"><a href="">Soporte</a></h4>
+            <p class="description">Soporte técnico y mantenimiento a todo tipo de equipos de cómputo e inteligentes.</p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            <div class="icon"><i class="bi bi-journal-code"></i></div>
+            <h4 class="title"><a href="">Software</a></h4>
+            <p class="description">Ofrecemos desarrollo de sistemas empresariales en base a las necesidades y especificaciones de nuestros clientes.</p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <div class="icon"><i class="bi bi-pc-display-horizontal"></i></div>
+            <h4 class="title"><a href="">Cómputo</a></h4>
+            <p class="description">Ofrecemos todo tipo de productos de computación, desde un accesorio hasta un equipo completo.</p>
           </div>
 
         </div>
 
       </div>
     </section>
-  
-  
-  
+    
     <section id="call-to-action">
       <div class="container text-center" data-aos="zoom-in">
-        <h3>Podemos conseguir cualquier producto que necesites para tu pequena, mediana o grande negocio, damos soluciones tecnologicas</h3>
+        <h3>Podemos conseguir cualquier producto que necesites para tu pequeña, mediana o grande empresa, damos soluciones tecnológicas de cálidad</h3>
       </div>
     </section>
     
@@ -160,7 +157,7 @@
 
         <header class="section-header">
           <h3>Ramo de conocimiento</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <p> Somos profesionales en los servicios y soluciones que ofrecemos, tenemos al personal altamente calificado para resolver o dar la asesoría necesaria que el cliente necesita.</p>
         </header>
 
         <div class="skills-content">
@@ -224,7 +221,7 @@
       </div>
     </section><!-- End Our Clients Section -->
 
-    <section id="testimonials" class="section-bg">
+    <!-- <section id="testimonials" class="section-bg">
       <div class="container aos-init aos-animate" data-aos="fade-up">
 
         <header class="section-header">
@@ -300,7 +297,7 @@
                   <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2 / 5">
               <div class="testimonial-item">
@@ -313,7 +310,7 @@
                   <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 5">
               <div class="testimonial-item">
@@ -326,7 +323,7 @@
                   <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 5">
               <div class="testimonial-item">
@@ -339,7 +336,7 @@
                   <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="4" role="group" aria-label="5 / 5">
               <div class="testimonial-item">
@@ -352,7 +349,7 @@
                   <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
           <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" role="group" aria-label="1 / 5">
               <div class="testimonial-item">
@@ -414,14 +411,14 @@
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 
       </div>
-    </section>
+    </section>  -->
     
     <section id="contact" class="section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
           <h3>Contáctanos</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p>Si necesitas apoyo o tienes dudas sobre la empresa, no dudes más y ponte en contácto con de inmediato con las siguientes opciones.</p>
         </div>
 
         <div class="row contact-info">
