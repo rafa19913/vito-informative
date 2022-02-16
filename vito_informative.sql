@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 16, 2022 at 08:41 PM
+-- Generation Time: Feb 16, 2022 at 09:03 PM
 -- Server version: 5.7.33
 -- PHP Version: 8.0.14
 
@@ -20,6 +20,261 @@ SET time_zone = "+00:00";
 --
 -- Database: `vito_informative`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `nombre` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+--
+-- Dumping data for table `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nombre`) VALUES
+(1, 'Pórtatiles'),
+(2, 'Escritorio'),
+(3, 'Industrial'),
+(4, 'Punto-de-venta'),
+(5, 'Oficina'),
+(6, 'Impresora'),
+(7, 'Uso-general'),
+(8, 'Montaje-fijo'),
+(9, 'Terminal'),
+(10, 'Tableta'),
+(11, 'RFID'),
+(12, 'Almacen'),
+(13, 'Consumible'),
+(14, 'Etiqueta'),
+(15, 'Ribbon'),
+(16, 'Toner-y-tinta'),
+(18, 'Tarjeta-PVC'),
+(19, 'Seguridad'),
+(20, 'Control-Acceso'),
+(21, 'CCTV'),
+(22, 'Videoportero'),
+(23, 'Alarma'),
+(24, 'Proteccion-perimetral'),
+(25, 'Radiocomunicacion'),
+(26, 'Computo'),
+(27, 'Laptop'),
+(28, 'Computadora'),
+(29, 'Accesorio'),
+(30, 'Insumo'),
+(31, 'Gaming'),
+(32, 'Redes'),
+(33, 'Cableado-estructurado'),
+(34, 'Servidores'),
+(35, 'Equipo WLAN'),
+(36, 'Networking'),
+(37, 'Protección y energía'),
+(38, 'Baterias'),
+(39, 'PDU-UPS-Respaldos'),
+(40, 'Lampara-de-emergencia'),
+(41, 'Fuentes-de-poder'),
+(42, 'Escaneres');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `img_productos`
+--
+
+CREATE TABLE `img_productos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `path` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `id_producto` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+--
+-- Dumping data for table `img_productos`
+--
+
+INSERT INTO `img_productos` (`id`, `path`, `id_producto`) VALUES
+(10, 'assets/img/modal-img/zd600_1.jpg', 7),
+(11, 'assets/img/modal-img/zd600_1.jpg', 7),
+(12, 'assets/img/modal-img/zd600_3.jpg', 7),
+(13, 'assets/img/modal-img/zd400_1.jpg', 8),
+(14, 'assets/img/modal-img/zd400_1.jpg', 8),
+(15, 'assets/img/modal-img/zd400_3.jpg', 8),
+(16, 'assets/img/modal-img/zd200_1.png', 9),
+(17, 'assets/img/modal-img/zd200_2.jpg', 9),
+(18, 'assets/img/modal-img/zd500_1.jpg', 10),
+(19, 'assets/img/modal-img/zd500_2.jpg', 10),
+(20, 'assets/img/modal-img/gk420_1.jpg', 11),
+(21, 'assets/img/modal-img/gk420_2.jpg', 11),
+(22, 'assets/img/modal-img/gc420_1.jpg', 12),
+(23, 'assets/img/modal-img/gc420_2.jpg', 12),
+(24, 'assets/img/modal-img/zd410_1.jpg', 13),
+(25, 'assets/img/modal-img/zd410_2.jpg', 13),
+(26, 'assets/img/modal-img/ZD510-HC_1.jpg', 14),
+(27, 'assets/img/modal-img/ZD510-HC_2.jpg', 14),
+(28, 'assets/img/modal-img/ZQ600_1.jpg', 15),
+(29, 'assets/img/modal-img/ZQ600_2.jpg', 15),
+(30, 'assets/img/modal-img/ZQ500_1.jpg', 16),
+(31, 'assets/img/modal-img/ZQ500_2.jpg', 16),
+(32, 'assets/img/modal-img/ZQ300_1.jpg', 17),
+(33, 'assets/img/modal-img/ZQ300_2.jpg', 17),
+(34, 'assets/img/modal-img/ZT600_1.jpg', 25),
+(35, 'assets/img/modal-img/ZT600_2.jpg', 25),
+(36, 'assets/img/modal-img/ZT600_2.jpg', 26),
+(37, 'assets/img/modal-img/ZT600_1.jpg', 26),
+(38, 'assets/img/modal-img/ZT510_1.png', 27),
+(39, 'assets/img/modal-img/ZT510_2.jpg', 27),
+(40, 'assets/img/modal-img/ZT400_1.jpg', 28),
+(41, 'assets/img/modal-img/ZT400_2.jpg', 28),
+(42, 'assets/img/modal-img/ZT400_1.jpg', 29),
+(43, 'assets/img/modal-img/ZT400_2.jpg', 29),
+(44, 'assets/img/modal-img/ZT200_1.jpg', 30),
+(45, 'assets/img/modal-img/ZT200_2.jpg', 30),
+(46, 'assets/img/modal-img/220Xi4_1.jpg', 31),
+(47, 'assets/img/modal-img/220Xi4_2.jpg', 31),
+(48, 'assets/img/modal-img/TM-T20_1.jpg', 32),
+(49, 'assets/img/modal-img/TM-T20_2.png', 32),
+(50, 'assets/img/modal-img/TM-u220_1.jpg', 33),
+(51, 'assets/img/modal-img/TM-u220_2.jpg', 33),
+(52, 'assets/img/modal-img/TD-4420TN_1.jpg', 34),
+(53, 'assets/img/modal-img/TD-4420TN_2.png', 34),
+(54, 'assets/img/modal-img/INK-TANK-315_1.jpg', 35),
+(55, 'assets/img/modal-img/INK-TANK-315_2.jpg', 35),
+(56, 'assets/img/modal-img/L3250_1.jpg', 36),
+(57, 'assets/img/modal-img/L3250_2.png', 36),
+(58, 'assets/img/modal-img/SMART-TANK-615_2.jpg', 37),
+(59, 'assets/img/modal-img/SMART-TANK-615_1.png', 37),
+(60, 'assets/img/modal-img/DS8100_1.jpg', 38),
+(61, 'assets/img/modal-img/DS8100_2.jpg', 38),
+(62, 'assets/img/modal-img/DS2200_1.jpg', 39),
+(63, 'assets/img/modal-img/DS2200_2.jpg', 39),
+(64, 'assets/img/modal-img/LI2208_1.jpg', 40),
+(65, 'assets/img/modal-img/LI2208_2.jpg', 40),
+(66, 'assets/img/modal-img/LS1203_1.jpg', 41),
+(67, 'assets/img/modal-img/LS1203_2.jpg', 41),
+(68, 'assets/img/modal-img/DS3600-KD_1.png', 42),
+(69, 'assets/img/modal-img/DS3600-KD_2.jpg', 42),
+(70, 'assets/img/modal-img/LI3600-ER_1.jpg', 43),
+(71, 'assets/img/modal-img/LI3600-ER_2.jpg', 43),
+(72, 'assets/img/modal-img/DS3600-DPA_1.jpg', 44),
+(73, 'assets/img/modal-img/DS3600-DPA_2.jpg', 44),
+(78, 'assets/img/modal-img/DS457_1.png', 45),
+(79, 'assets/img/modal-img/DS457_1.png', 45),
+(80, 'assets/img/modal-img/MS954_1.png', 46),
+(81, 'assets/img/modal-img/MS954_2.png', 46),
+(82, 'assets/img/modal-img/TC5X_1.jpg', 47),
+(83, 'assets/img/modal-img/TC5X_2.jpg', 47),
+(84, 'assets/img/modal-img/EC55_1.jpg', 48),
+(85, 'assets/img/modal-img/EC55_2.jpg', 48),
+(86, 'assets/img/modal-img/TC21_1.jpg', 49),
+(87, 'assets/img/modal-img/TC21_2.jpg', 49),
+(88, 'assets/img/modal-img/EC30_1.jpg', 50),
+(89, 'assets/img/modal-img/EC30_2.jpg', 50),
+(90, 'assets/img/modal-img/TC72_1.jpg', 51),
+(91, 'assets/img/modal-img/TC72_2.jpg', 51),
+(113, 'assets/img/modal-img/MC33_2.jpg', 52),
+(114, 'assets/img/modal-img/MC33_1.jpg', 52),
+(115, 'assets/img/modal-img/MC2200_2.jpg', 53),
+(116, 'assets/img/modal-img/MC2200_1.jpg', 53),
+(117, 'assets/img/modal-img/MC9300_1.jpg', 54),
+(118, 'assets/img/modal-img/MC9300_2.jpg', 54),
+(119, 'assets/img/modal-img/TC8300_1.jpg', 55),
+(120, 'assets/img/modal-img/TC8300_2.png', 55),
+(121, 'assets/img/modal-img/PS20_2.jpeg', 56),
+(122, 'assets/img/modal-img/PS20_1.jpeg', 56),
+(123, 'assets/img/modal-img/ET8x_1.jpg', 66),
+(124, 'assets/img/modal-img/ET8x_2.jpg', 66),
+(125, 'assets/img/modal-img/L10_1.jpg', 67),
+(126, 'assets/img/modal-img/L10_2.jpeg', 67),
+(127, 'assets/img/modal-img/ET5x_1.jpg', 68),
+(128, 'assets/img/modal-img/ET5x_2.jpg', 68),
+(129, 'assets/img/modal-img/UHF_RFD40_1.jpg', 69),
+(130, 'assets/img/modal-img/UHF_RFD40_2.jpg', 69),
+(131, 'assets/img/modal-img/MC3300_RFID_1.jpg', 70),
+(132, 'assets/img/modal-img/MC3300_RFID_2.png', 70),
+(133, 'assets/img/modal-img/RFD8500_1.jpg', 71),
+(134, 'assets/img/modal-img/RFD8500_2.png', 71),
+(135, 'assets/img/modal-img/WT6300_1.jpg', 72),
+(136, 'assets/img/modal-img/etiqueta_4x4_1.jpg', 73),
+(137, 'assets/img/modal-img/etiqueta_4x3_1.jpg', 74),
+(138, 'assets/img/modal-img/ribbon_1.png', 75),
+(139, 'assets/img/modal-img/Cartucho_1.jpg', 76),
+(140, 'assets/img/modal-img/Negro-103A_2.jpg', 76),
+(141, 'assets/img/modal-img/BT5001M_2.png', 77),
+(142, 'assets/img/modal-img/BT5001M_1.png', 77),
+(143, 'assets/img/modal-img/S-PRINT_1.jpeg', 78),
+(144, 'assets/img/modal-img/S-PRINT_2.png', 78),
+(146, 'assets/img/modal-img/tarjeta_pvc.jpg', 79),
+(147, 'assets/img/modal-img/DS-K1TA70MI-T_1.jpg', 80),
+(148, 'assets/img/modal-img/DS-K1TA70MI-T_2.png', 80),
+(149, 'assets/img/modal-img/DS-K1T671-M_1.png', 81),
+(150, 'assets/img/modal-img/DS-K1T671-M_2.jpg', 81),
+(151, 'assets/img/modal-img/DS-K1T804B-EF_1.png', 82),
+(152, 'assets/img/modal-img/DS-K1T804B-EF_2.png', 82),
+(153, 'assets/img/modal-img/F22-ID_1.png', 83),
+(154, 'assets/img/modal-img/F22-ID_2.png', 83);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marcas`
+--
+
+CREATE TABLE `marcas` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+--
+-- Dumping data for table `marcas`
+--
+
+INSERT INTO `marcas` (`id`, `nombre`) VALUES
+(1, 'Zebra Technologies'),
+(2, 'HoneyWell'),
+(3, 'QIAN'),
+(4, 'Epson'),
+(5, 'Brother'),
+(6, 'HP'),
+(7, 'Consumibles'),
+(8, 'HIKVISION'),
+(9, 'ZKTeco'),
+(10, 'Epcom'),
+(11, ' KOCOM'),
+(12, 'EZVIZ'),
+(13, 'ASSA ABLOY'),
+(14, 'OPTEX'),
+(15, 'POLITEC'),
+(16, 'LENOVO '),
+(17, 'DELL'),
+(18, 'SYNOLOGY'),
+(19, 'ASUS'),
+(20, 'Plantronics'),
+(21, 'ACTECK'),
+(22, 'Logitech'),
+(23, 'Game Factor'),
+(24, 'ADATA'),
+(25, 'Kingston'),
+(26, 'Xerox'),
+(27, 'NACEB'),
+(28, 'ACER'),
+(29, 'Logitech'),
+(30, 'PANDUIT'),
+(31, 'Linkedpro'),
+(32, 'RASILIENT'),
+(33, 'Altai Technologies'),
+(34, 'TP-LINK'),
+(35, 'Ubiquiti'),
+(36, 'WI-TEK'),
+(37, 'ALLIED TELESIS'),
+(38, 'SmartBitt'),
+(39, 'CDP'),
+(40, 'CYBERPOWER'),
+(41, 'SYSTEM SENSOR'),
+(42, 'TWR'),
+(43, 'ECCO');
 
 -- --------------------------------------------------------
 
@@ -191,6 +446,25 @@ INSERT INTO `productos` (`id`, `nombre`, `modelo`, `desc`, `mini-desc`, `id_cate
 --
 
 --
+-- Indexes for table `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `img_productos`
+--
+ALTER TABLE `img_productos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_producto` (`id_producto`);
+
+--
+-- Indexes for table `marcas`
+--
+ALTER TABLE `marcas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `productos`
 --
 ALTER TABLE `productos`
@@ -204,6 +478,24 @@ ALTER TABLE `productos`
 --
 
 --
+-- AUTO_INCREMENT for table `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
+-- AUTO_INCREMENT for table `img_productos`
+--
+ALTER TABLE `img_productos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
+
+--
+-- AUTO_INCREMENT for table `marcas`
+--
+ALTER TABLE `marcas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
 -- AUTO_INCREMENT for table `productos`
 --
 ALTER TABLE `productos`
@@ -212,6 +504,12 @@ ALTER TABLE `productos`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `img_productos`
+--
+ALTER TABLE `img_productos`
+  ADD CONSTRAINT `img_productos_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id`);
 
 --
 -- Constraints for table `productos`
