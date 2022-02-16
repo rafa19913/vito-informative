@@ -12,22 +12,18 @@ $conn = Conexion::conectar();
 
 
 <head>
-  <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta charset="UTF-8">
 
-  <title>BizPage Bootstrap Template</title>
+  <title>Impresoras</title>
 
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-  
   <meta charset="utf-8">
 
-
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon_io/favicon-32x32.png" rel="icon">
+  <link href="assets/img/favicon_io/favicon.ico" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
@@ -42,8 +38,6 @@ $conn = Conexion::conectar();
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  
-  
   
   
 <style>
@@ -252,46 +246,10 @@ $conn = Conexion::conectar();
   
   
 <!-- Modal -->
-<!-- <div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="modal-product" aria-hidden="true">
-	<div class="modal-dialog" role="document" >
-	  <div class="modal-content" style="background-color: transparent;">
-			<div class="wrapper-modal">
-				<div class="product-img-modal">
-            <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide" >
-                      <img alt="" id="img-product-modal-change">
-                </div>
-            </div>
-				</div>
-					<div class="product-info-modal">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close" >
-							<span class="modal-span" aria-hidden="true">&times;</span>
-						  </button>
-					  <div class="product-text-modal">
-            
-						<h1 id="title-modal-aux">Zebra ZD421</h1>
-						<h2 id="sub-title-aux">Zebra Technologies</h2>
-            <p id="desc-modal-aux">            
-              Cada ZD421 viene estándar con USB y host USB, y ofrece Ethernet opcional, puerto serie y radio inalámbrico de dos bandas con wifi 802.11ac y Bluetooth 4.1.
-            </p>
-            
-          </div>
-					  <div class="product-price-btn-modal">
-            <a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text=Hola, estoy necesito información de:" target="_blank" id="hre-cotizar-modal"> 
-						<button type="button"> Cotizar </button>
-            </a>
-					  </div>
-					</div>
-			</div>
-	  	</div>
-	</div>
-</div> -->
-
-
 
 <!-- Modal -->
-<div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal fade bd-example-modal-lg" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="title-modal-aux">Modal title</h5>
@@ -305,8 +263,10 @@ $conn = Conexion::conectar();
               <img class="img-fluid" alt="" id="img-product-modal-change">
             </div>
             <div class="col-md-6">
-                  <h6 id="sub-title-aux"> <b>Marca</b>: Zebra Technologies</h6>
-                  <p id="desc-modal-aux">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsam eaque consequuntur cupiditate aperiam harum pariatur quam dicta exercitationem provident impedit reiciendis velit voluptas aut, nostrum laboriosam animi perferendis atque?</p>
+
+            <h6 id="sub-title-aux"> Marca</h6>
+            <h6 id="sub-modelo-aux"> Modelo</h6>
+            <p id="desc-modal-aux">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsam eaque consequuntur cupiditate aperiam harum pariatur quam dicta exercitationem provident impedit reiciendis velit voluptas aut, nostrum laboriosam animi perferendis atque?</p>
             </div>
         </div>
       </div>
@@ -316,7 +276,6 @@ $conn = Conexion::conectar();
     </div>
   </div>
 </div>
-  
   
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="section-bg">
@@ -329,12 +288,12 @@ $conn = Conexion::conectar();
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Portatiles">Pórtatiles</li>
+            <li data-filter="*" class="filter-active">Todos</li>
+            <li data-filter=".filter-Pórtatiles">Pórtatiles</li>
             <li data-filter=".filter-Escritorio">Escritorio</li>
             <li data-filter=".filter-Industrial">Industriales</li>
-            <li data-filter=".filter-Industrial">Punto de venta</li>
-            <li data-filter=".filter-Industrial">De oficina</li>
+            <li data-filter=".filter-Punto-de-venta">Punto de venta</li>
+            <li data-filter=".filter-Oficina">De oficina</li>
           </ul>
         </div>
       </div>
@@ -342,7 +301,7 @@ $conn = Conexion::conectar();
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
         <?php
-            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
+            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id WHERE p.id_categoria_master = 6";
             foreach ($conn->query($sql) as $row) {
         ?>
         
@@ -356,8 +315,8 @@ $conn = Conexion::conectar();
               <img src="<?php echo $row['preview_img'];?>" class="img-fluid" alt="">
             </figure>
 
-            <div class="portfolio-info" >
-              <h4><a href="portfolio-details.html"><?php echo $row['nombre']; ?></a></h4>
+            <div class="portfolio-info" onClick="openProductModal(<?php echo $row['id']?>);">
+               <h4><a href="#"><?php echo $row['nombre']; ?></a></h4>
               <p><?php echo $row['mini-desc'];  ?></p>
             </div>
           </div>
@@ -495,15 +454,13 @@ $conn = Conexion::conectar();
     
     
     
-    <!-- ======= Call To Action Section ======= -->
-    <section id="call-to-action">
-        <div class="container text-center" data-aos="zoom-in">
-          <h3>Cotiza sin costo</h3>
-          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit expedita nostrum eius. Illum illo omnis minima, mollitia expedita, maiores maxime dicta ratione quam provident veniam voluptates nulla dolorem tempora repudiandae?</p>
-          <a class="cta-btn" href="#">Cotizar ahora</a>
-        </div>
-      </section><!-- End Call To Action Section -->
-  
+    
+    
+    
+  <?php
+      include("static/call-action.php"); 
+  ?>
+
   </main><!-- End #main -->
   
   
@@ -519,11 +476,11 @@ $conn = Conexion::conectar();
     var auxImage = 0;
     var intervalxd;
     
-    function changeDetails(title, sub_title, desc, preview){
-      
+    function changeDetails(title, sub_title, desc, preview, modelo){
       document.getElementById("hre-cotizar-modal").href= "https://web.whatsapp.com/send?phone=528117413496&text=Hola, necesito información de " + title + " de la marca " + sub_title;
       document.getElementById("title-modal-aux").innerHTML= title;
-      document.getElementById("sub-title-aux").innerHTML= sub_title;
+      document.getElementById("sub-title-aux").innerHTML= '<b>Marca</b>: ' + sub_title;
+      document.getElementById("sub-modelo-aux").innerHTML= '<b>Modelo</b>: ' + modelo;
       document.getElementById("desc-modal-aux").innerHTML= desc;
       document.getElementById("img-product-modal-change").src= preview;
       
@@ -542,10 +499,7 @@ $conn = Conexion::conectar();
         type: "POST",
         data: {id},
         success: function(data){
-          changeDetails(data['nombre'], data['nombreMarca'], data['desc'], data['preview_img']);
-          // alert(data['nombreMarca']);
-          // alert(data['nombre']);
-          // alert(data['desc']);
+          changeDetails(data['nombre'], data['nombreMarca'], data['desc'], data['preview_img'], data['modelo']);
         }, error: function(data){
           console.log(data);
         }
@@ -566,7 +520,12 @@ $conn = Conexion::conectar();
           for (let index = 0; index < data.length; index++) {
             images[index] = data[index];
           }
-          changeImage(images);
+          
+          if (data.length > 1){
+            changeImage(images);
+          }
+          
+          
         }, error: function(data){
           console.log(data);
         }
@@ -589,6 +548,8 @@ $conn = Conexion::conectar();
     
     
   </script>
+    
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

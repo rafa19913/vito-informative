@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BizPage Bootstrap Template</title>
+  <title>Contacto</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link href="assets/img/favicon_io/favicon-32x32.png" rel="icon">
+  <link href="assets/img/favicon_io/favicon.ico" rel="apple-touch-icon">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
@@ -92,57 +92,57 @@
 
         <div class="section-header">
           <h3>Contáctanos</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p>A continuación se encuentran nuestras redes sociales y otras opciones de contacto.</p>
         </div>
 
         <div class="row contact-info">
 
         <div class="col-md-4">
             <div class="contact-address">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Dirección</h3>
+              <i class="bi bi-geo-alt"></i> </a>
+              <h3>Dirección</h3> </a>
               <address>El Carmen, Nuevo León C.P 66583, Buena Vista</address>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-phone">
-              <i class="bi bi-phone"></i>
-              <h3>Tel. o WhatsApp</h3>
+              <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola,%20quisiera%20informaci%C3%B3n"> <i class="bi bi-phone"></i> </a>
+              <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola,%20quisiera%20informaci%C3%B3n"> <h3>Tel. o WhatsApp</h3> </a>
               <p><a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola,%20quisiera%20informaci%C3%B3n">(81)-174-13-496</a></p>
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="bi bi-envelope"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:info@example.com">contacto@vitotechnologies.com</a></p>
+          
+      
+            <div class="col-md-4">
+              <div class="contact-email">
+              <a href="mailto:contacto@vitotechnologies.com"> <i class="bi bi-envelope"></i> </a>
+              <a href="mailto:contacto@vitotechnologies.com">  <h3>Email</h3> </a>
+                <p><a href="mailto:contacto@vitotechnologies.com">contacto@vitotechnologies.com</a></p>
+              </div>
             </div>
-          </div>
-
           
           
           <div class="col-md-4">
             <div class="contact-address">
-              <i class="bi bi-facebook"></i>
-              <h3>Facebook</h3>
+            <a href="https://www.facebook.com/VITOTECHNOLOGIES"><i class="bi bi-facebook"></i>  </a>
+              <a href="https://www.facebook.com/VITOTECHNOLOGIES"><h3>Facebook</h3> </a>
               <p><a href="https://www.facebook.com/VITOTECHNOLOGIES">Vito Technologies</a></p>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-phone">
-              <i class="bi bi-instagram"></i>
-              <h3>Instagram</h3>
+            <a href="https://www.instagram.com/vito_technologies/"><i class="bi bi-instagram"></i>  </a>
+            <a href="https://www.instagram.com/vito_technologies/"><h3>Instagram</h3> </a>
               <p><a href="https://www.instagram.com/vito_technologies/">Vito_Technologies</a></p>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-email">
-              <i class="bi bi-youtube"></i>
-              <h3>YouTube</h3>
+            <a href="https://www.youtube.com/channel/UCvklhpONJClrvObOxqd9uuA"><i class="bi bi-youtube"></i> </a>
+              <a href="https://www.youtube.com/channel/UCvklhpONJClrvObOxqd9uuA"> <h3>YouTube</h3> </a>
               <p><a href="https://www.youtube.com/channel/UCvklhpONJClrvObOxqd9uuA">Vito Technologies</a></p>
             </div>
           </div>
@@ -185,106 +185,25 @@
     
     
     
-    
-    
-    
-    
-    <section id="call-to-action">
-      <div class="container text-center" data-aos="zoom-in">
-        <h3>Cotiza sin costo</h3>
-        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit expedita nostrum eius. Illum illo omnis minima, mollitia expedita, maiores maxime dicta ratione quam provident veniam voluptates nulla dolorem tempora repudiandae?</p>
-        <a class="cta-btn" href="#">Cotizar ahora</a>
-      </div>
-    </section>
+  <!-- ======= Footer ======= -->
+  <?php
+      include("static/call-action.php"); 
+  ?>
+
+  
     
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   
   
-
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+  <?php
+      include("static/footer.php"); 
+      include("static/links-js.php"); 
+  ?>
 
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Vito Technologies</h3>
-            <p>
-                Síguenos a continuación en nuestras redes sociales o también puedes comunicarte con nosotros enviando un correo electrónico y contestaremos lo más rápido posible, muchas gracias por considerarnos.
-
-
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contáctanos</h4>
-            <p>
-              El Carmen, Nuevo León <br>
-              C.P 66583<br>
-              Buena Vista <br>
-              <strong>Tel. o WhatsApp:</strong> (81)-174-13-496<br>
-              <strong>Email:</strong> contacto@vitotechnologies.com<br>
-            </p>
-
-            <div class="social-links">
-              <a href="https://www.facebook.com/VITOTECHNOLOGIES" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/vito_technologies/" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola,%20quisiera%20informaci%C3%B3n" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
-              <a href="https://www.youtube.com/channel/UCvklhpONJClrvObOxqd9uuA" class="youtube"><i class="bi bi-youtube"></i></a>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Mantente al pendiente de nuestras ofertas</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Vito Technologies 2022</strong>. Todos los derechos reservados
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   
-  
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
- 
 
 </body>
 

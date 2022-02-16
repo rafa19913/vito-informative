@@ -18,7 +18,7 @@ $conn = Conexion::conectar();
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta charset="UTF-8">
 
-  <title>BizPage Bootstrap Template</title>
+  <title>Escaneres</title>
 
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -27,10 +27,11 @@ $conn = Conexion::conectar();
   <meta charset="utf-8">
 
 
+  
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link href="assets/img/favicon_io/favicon-32x32.png" rel="icon">
+  <link href="assets/img/favicon_io/favicon.ico" rel="apple-touch-icon">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
@@ -253,41 +254,37 @@ $conn = Conexion::conectar();
   </style>
   
   
-<!-- Modal -->
-<div class="modal fade" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="modal-product" aria-hidden="true">
-	<div class="modal-dialog" role="document" >
-	  <div class="modal-content" style="background-color: transparent;">
-			<div class="wrapper-modal">
-				<div class="product-img-modal">
-            <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide" >
-                      <img alt="" id="img-product-modal-change">
-                </div>
+  
+  
 
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="title-modal-aux">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+              <img class="img-fluid" alt="" id="img-product-modal-change">
             </div>
-				</div>
-					<div class="product-info-modal">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close" >
-							<span class="modal-span" aria-hidden="true">&times;</span>
-						  </button>
-					  <div class="product-text-modal">
-            
-						<h1 id="title-modal-aux">Zebra ZD421</h1>
-						<h2 id="sub-title-aux">Zebra Technologies</h2>
-            <p id="desc-modal-aux">            
-              Cada ZD421 viene estándar con USB y host USB, y ofrece Ethernet opcional, puerto serie y radio inalámbrico de dos bandas con wifi 802.11ac y Bluetooth 4.1.
-            </p>
-            
-          </div>
-					  <div class="product-price-btn-modal">
-            <a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text=Hola, estoy necesito información de:" target="_blank" id="hre-cotizar-modal"> 
-						<button type="button"> Cotizar </button>
-            </a>
-					  </div>
-					</div>
-			</div>
-	  	</div>
-	</div>
+            <div class="col-md-6">
+
+            <h6 id="sub-title-aux"> Marca</h6>
+            <h6 id="sub-modelo-aux"> Modelo</h6>
+            <p id="desc-modal-aux">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsam eaque consequuntur cupiditate aperiam harum pariatur quam dicta exercitationem provident impedit reiciendis velit voluptas aut, nostrum laboriosam animi perferendis atque?</p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text=Hola, estoy necesito información de:" target="_blank" id="hre-cotizar-modal" type="button" class="btn btn-primary">Cotizar</a>
+      </div>
+    </div>
+  </div>
 </div>
   
     <!-- ======= Portfolio Section ======= -->
@@ -301,10 +298,10 @@ $conn = Conexion::conectar();
         <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-Portatiles">Uso general</li>
-            <li data-filter=".filter-Escritorio">Industrial</li>
-            <li data-filter=".filter-Industrial">Montaje fijo</li>
+            <li data-filter="*" class="filter-active">Todos</li>
+            <li data-filter=".filter-Uso-general">Uso general</li>
+            <li data-filter=".filter-Industrial">Industrial</li>
+            <li data-filter=".filter-Montaje-fijo">Montaje fijo</li>
           </ul>
         </div>
       </div>
@@ -312,11 +309,11 @@ $conn = Conexion::conectar();
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
         <?php
-            // $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id";
-            // foreach ($conn->query($sql) as $row) {
+            $sql = "SELECT p.*, m.nombre as nombreMarca, c.nombre as nombreCategoria FROM productos p JOIN marcas m on p.id_marca = m.id JOIN categorias c on p.id_categoria = c.id WHERE p.id_categoria_master = 42";
+            foreach ($conn->query($sql) as $row) {
         ?>
         
-<!--         
+        
     
         <a href="" data-toggle="modal" data-target="#modal-product" onClick="openProductModal(<?php echo $row['id']?>);">
       
@@ -332,12 +329,12 @@ $conn = Conexion::conectar();
             </div>
           </div>
         </div>
-         -->
+        
         <?php
-          // }
+          }
         ?>
       
-<!--       
+    <!--       
         <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
           <div class="portfolio-wrap">
             <figure>
@@ -465,15 +462,13 @@ $conn = Conexion::conectar();
     
     
     
-    <!-- ======= Call To Action Section ======= -->
-    <section id="call-to-action">
-        <div class="container text-center" data-aos="zoom-in">
-          <h3>Cotiza sin costo</h3>
-          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit expedita nostrum eius. Illum illo omnis minima, mollitia expedita, maiores maxime dicta ratione quam provident veniam voluptates nulla dolorem tempora repudiandae?</p>
-          <a class="cta-btn" href="#">Cotizar ahora</a>
-        </div>
-      </section><!-- End Call To Action Section -->
-  
+    
+    
+    
+  <?php
+      include("static/call-action.php"); 
+  ?>
+
   </main><!-- End #main -->
   
   
@@ -487,11 +482,11 @@ $conn = Conexion::conectar();
     var auxImage = 0;
     var intervalxd;
     
-    function changeDetails(title, sub_title, desc, preview){
-      
+    function changeDetails(title, sub_title, desc, preview, modelo){
       document.getElementById("hre-cotizar-modal").href= "https://web.whatsapp.com/send?phone=528117413496&text=Hola, necesito información de " + title + " de la marca " + sub_title;
       document.getElementById("title-modal-aux").innerHTML= title;
-      document.getElementById("sub-title-aux").innerHTML= sub_title;
+      document.getElementById("sub-title-aux").innerHTML= '<b>Marca</b>: ' + sub_title;
+      document.getElementById("sub-modelo-aux").innerHTML= '<b>Modelo</b>: ' + modelo;
       document.getElementById("desc-modal-aux").innerHTML= desc;
       document.getElementById("img-product-modal-change").src= preview;
       
@@ -510,10 +505,7 @@ $conn = Conexion::conectar();
         type: "POST",
         data: {id},
         success: function(data){
-          changeDetails(data['nombre'], data['nombreMarca'], data['desc'], data['preview_img']);
-          // alert(data['nombreMarca']);
-          // alert(data['nombre']);
-          // alert(data['desc']);
+          changeDetails(data['nombre'], data['nombreMarca'], data['desc'], data['preview_img'], data['modelo']);
         }, error: function(data){
           console.log(data);
         }
@@ -534,7 +526,12 @@ $conn = Conexion::conectar();
           for (let index = 0; index < data.length; index++) {
             images[index] = data[index];
           }
-          changeImage(images);
+          
+          if (data.length > 1){
+            changeImage(images);
+          }
+          
+          
         }, error: function(data){
           console.log(data);
         }
@@ -557,8 +554,10 @@ $conn = Conexion::conectar();
     
     
   </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+    
+  
+  
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
