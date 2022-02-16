@@ -520,7 +520,6 @@ $conn = Conexion::conectar();
           for (let index = 0; index < data.length; index++) {
             images[index] = data[index];
           }
-          
           if (data.length > 1){
             changeImage(images);
           }

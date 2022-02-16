@@ -8,7 +8,7 @@
         <div class="col-xl-11 d-flex align-items-center justify-content-between">
           <!-- <h1 class="logo"><a href="index.html">BizPage</a></h1> -->
           <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="index.html" class="logo"><img src="assets/img/logo-vito.png" alt="" class="img-fluid"></a>
+          <a href="index.php" class="logo"><img src="assets/img/logo-vito.png" alt="" class="img-fluid"></a>
           <nav id="navbar" class="navbar">
             <ul>
               <li><a class="nav-link" href="index.php">Home</a></li>

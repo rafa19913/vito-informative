@@ -112,32 +112,32 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-printer"></i></div>
-            <h4 class="title"><a href="">Equipos de impresión</a></h4>
+            <h4 class="title"><a href="impresoras.php">Equipos de impresión</a></h4>
             <p class="description">Ofrecemos diversas productos de diferentes marcas y categorias de impresión en base a las necesidades de nuestros clientes.  </p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-cart4"></i></div>
-            <h4 class="title"><a href="">Puntos de venta</a></h4>
+            <h4 class="title"><a href="impresoras.php">Puntos de venta</a></h4>
             <p class="description">Ofrecemos desde un accesorio, software de punto de venta, hasta todo el kit completo para arrancar su negocio desde cero. </p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-box-seam"></i></div>
-            <h4 class="title"><a href="">Consumibles</a></h4>
+            <h4 class="title"><a href="consumibles.php">Consumibles</a></h4>
             <p class="description">Ofrecemos todo tipo de consumibles para tu negocio (etiquetas, ribbon, tarjetas PVC, toner, entre otros).</p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-bookmark-check"></i></div>
-            <h4 class="title"><a href="">Soporte</a></h4>
+            <h4 class="title"><a href="servicios.php">Soporte</a></h4>
             <p class="description">Soporte técnico y mantenimiento a todo tipo de equipos de cómputo e inteligentes.</p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-journal-code"></i></div>
-            <h4 class="title"><a href="">Software</a></h4>
+            <h4 class="title"><a href="servicios.php">Software</a></h4>
             <p class="description">Ofrecemos desarrollo de sistemas empresariales en base a las necesidades y especificaciones de nuestros clientes.</p>
           </div>
           <div class="col-lg-4 col-md-6 box aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bi bi-pc-display-horizontal"></i></div>
-            <h4 class="title"><a href="">Cómputo</a></h4>
+            <h4 class="title"><a href="computacion.php">Cómputo</a></h4>
             <p class="description">Ofrecemos todo tipo de productos de computación, desde un accesorio hasta un equipo completo.</p>
           </div>
 

@@ -21,7 +21,7 @@
     
   </style>
   
-  <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+  <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información"  class="float" target="_blank">
     <i class="my-float bi bi-whatsapp"></i>
   </a>
   
@@ -65,7 +65,7 @@
             <div class="social-links">
               <a href="https://www.facebook.com/VITOTECHNOLOGIES" class="facebook"><i class="bi bi-facebook"></i></a>
               <a href="https://www.instagram.com/vito_technologies/" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola,%20quisiera%20informaci%C3%B3n" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+              <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola,quisiera información" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
               <a href="https://www.youtube.com/channel/UCvklhpONJClrvObOxqd9uuA" class="youtube"><i class="bi bi-youtube"></i></a>
 
             </div>

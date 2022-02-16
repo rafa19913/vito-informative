@@ -102,90 +102,99 @@
         </header>
 
         <div class="row about-cols">
-
+          
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de controles de acceso" target="_blank" >
+
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/control-acceso.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-person-bounding-box"></i></div>
               </div>
-              <h2 class="title"><a href="#">Controles de acceso</a></h2>
+              <h2 class="title"><a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de controles de acceso" target="_blank" >Controles de acceso</a></h2>
               <p>
                  Realizamos desde instalación completas desde cero hasta mantenimiento y/o reparación, venta de accesorios que componen dicho equipo (electrónicos, licencia de software, entre otros).    
               </p>
             </div>
           </div>
-
+          </a>
+          
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de cableado de red" target="_blank">
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/cableado-red.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-hdd-network"></i></div>
               </div>
-              <h2 class="title"><a href="#">Cableado de red</a></h2>
+              <h2 class="title"><a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de cableado de red" target="_blank">Cableado de red</a></h2>
               <p>
                 Realizamos servicios de cableado estructurado interior/exterior de tipo par trenzado, fibra óptica y coaxial para cualquier tamaño de negocio / empresa.
               </p>
             </div>
           </div>
-
+          </a>
+          
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de Software" target="_blank">
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/sw.jpeg" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-ethernet"></i></div>
               </div>
-              <h2 class="title"><a href="#">Software</a></h2>
+              <h2 class="title"><a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de Software" target="_blank">Software</a></h2>
               <p>
                 Desarrollamos sistemas empresarials a la medida en base a las necesidades de nuestros clientes, además del dominio y hosting administrado por nosotros.
               </p>
             </div>
           </div>
-          
-          
+          </a>
           
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de Maquila" target="_blank">
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/maquila.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-archive"></i></div>
               </div>
-              <h2 class="title"><a href="#">Maquila</a></h2>
+              <h2 class="title"><a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de Maquila" target="_blank">Maquila</a></h2>
               <p>
                 Venta de diversos consumibles e impresión de etiquetas y tarjetas PVC con grabación en RFID.
               </p>
             </div>
           </div>
-          
-                
+          </a>
+              
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de Soporte técnico" target="_blank">
+
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/soporte-zebra.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-card-checklist"></i></div>
               </div>
-              <h2 class="title"><a href="#">Soprte Técnico</a></h2>
+              <h2 class="title"><a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de Soporte técnico" target="_blank">Soprte Técnico</a></h2>
               <p>
                 Brindamos asistencia vía remóto o presencial para rosolver problemas con equipos como terminales portátiles, impresoras de etiquetas, handheld, entre otros.   
               </p>
             </div>
           </div>
-          
-                
+          </a>
+              
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de Computación" target="_blank">
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/computacion.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-pc-display-horizontal"></i></div>
               </div>
-              <h2 class="title"><a href="#">Computación</a></h2>
+              <h2 class="title"><a href="https://web.whatsapp.com/send?phone=528117413496&text=Hola, quisiera información acerca de Computación" target="_blank">Computación</a></h2>
               <p>
                 Hacemos mantenimiento, reparación y detección de problemas en cualquier equipo como Computadoras de escritorio, laptops, impresoras de oficina, etc. 
               </p>
             </div>
           </div>
-
         </div>
+        </a>
 
       </div>
     </section>

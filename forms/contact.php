@@ -7,6 +7,8 @@ $name = $_POST['name'];
 $email_address = $_POST['email']; 
 $message = $_POST['message']; 
 
+// $subject = $_POST['subject']; 
+
 
 
 $to = $myemail;

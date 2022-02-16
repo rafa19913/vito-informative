@@ -324,7 +324,7 @@ $conn = Conexion::conectar();
             </figure>
 
             <div class="portfolio-info" >
-              <h4><a href="portfolio-details.html"><?php echo $row['nombre']; ?></a></h4>
+              <h4><a href="#"><?php echo $row['nombre']; ?></a></h4>
               <p><?php echo $row['mini-desc'];  ?></p>
             </div>
           </div>
@@ -334,7 +334,7 @@ $conn = Conexion::conectar();
           }
         ?>
       
-<!--       
+        <!--       
         <div class="col-lg-4 col-md-6 portfolio-item filter-escritorio">
           <div class="portfolio-wrap">
             <figure>
